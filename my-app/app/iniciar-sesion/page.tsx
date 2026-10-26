@@ -14,8 +14,8 @@ export default function LoginPage() {
                         alert("El correo debe tener un máximo de 100 caracteres");
                         return;
                 }
-                if (!correo.endsWith("@duoc.cl") && !correo.endsWith("@profesor.duoc.cl") && !correo.endsWith("@gmail.com")) {
-                        alert("El correo debe ser un @gmail.com o un @profesor.duoc.cl o un @duoc.cl");
+                if (!correo.endsWith("@duocuc.cl") && !correo.endsWith("@profesor.duocuc.cl") && !correo.endsWith("@gmail.com")) {
+                        alert("El correo debe ser un @gmail.com o un @profesor.duocuc.cl o un @duocuc.cl");
                         return;
                 }
                 if (contrasena.length < 4) {
@@ -96,7 +96,7 @@ export default function LoginPage() {
 
                                                 <div className="text-center">
                                                         <span className="text-muted small">¿No tienes cuenta? </span>
-                                                        <Link href="/registro" className="text-decoration-none fw-bold text-proper small">
+                                                        <Link href="/crear-sesion" className="text-decoration-none fw-bold text-proper small">
                                                                 Regístrate aquí
                                                         </Link>
                                                 </div>
