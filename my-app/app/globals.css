@@ -299,3 +299,27 @@ h5 {
   border-color: #203359;
   box-shadow: 0 0 0 0.25rem rgba(32, 51, 89, 0.25);
 }
+
+.boton-carrito{
+  background-color: #203359;
+  color: white;
+}
+
+.boton-carrito:hover {
+  background-color: #081122;
+  border:1px solid #203359;
+  color: #ffffff;
+  transform: background-color 0.3s ease;
+}
+
+.boton-detalle{
+  background-color: #ffffff;
+  border:1px solid #15233f;
+  color: #15233f;
+}
+
+.boton-detalle:hover {
+  background-color: #15233f;
+  color: white;
+  transform: background-color 0.3s ease;
+}

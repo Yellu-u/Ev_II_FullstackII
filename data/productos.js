@@ -1,4 +1,4 @@
-const productos = [
+export const productos = [
     {
     id: 1,
     imagen: "https://via.placeholder.com/400x300",
