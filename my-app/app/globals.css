@@ -1,45 +1,26 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Generales */
-
+/* =========================================
+    CONFIGURACIÓN BASE
+   ========================================= */
 body {
   background-color: white;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Fonts */
-h1 {
-  font-family: Montserrat;
-  font-weight: bold;
+/* Tipografía para títulos */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Aquí van todos los estilos referidos a páginas del usuario */
-/* Nav */
-
+/* =========================================
+    NAVBAR (TIENDA Y ADMIN)
+   ========================================= */
 .navbar-proper {
   background-color: #203359;
 }
@@ -57,24 +38,12 @@ h1 {
   margin: 10px;
 }
 
-
-/* Registro */
-
-.registro-titulo {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.container-form {
-  background-color: #d6d6d6;
-  padding: 50px;
-  margin: 30px;
-  border-radius: 15px;
-}
-
-/* Inicio Sesión */
-
-.login-titulo {
+/* =========================================
+    FORMULARIOS (LOGIN, REGISTRO, CONTACTO)
+   ========================================= */
+.login-titulo,
+.registro-titulo,
+.contacto-titulo {
   text-align: center;
   margin-bottom: 30px;
 }
@@ -85,22 +54,98 @@ h1 {
   display: block;
 }
 
-/* Contacto */
+.container-form {
+  background-color: #d6d6d6;
+  padding: 50px;
+  margin: 30px;
+  border-radius: 15px;
+}
 
-.contacto-titulo {
+/* =========================================
+    TIENDA (PRODUCTOS, HOME)
+   ========================================= */
+#contenedor_carta {
+  width: 200px;
   text-align: center;
-  margin-bottom: 30px;
 }
 
-/* Aquí van todos los estilos referidos a páginas del administrador */
-
-/* Admin main */
-
-.row {
+.Productos_lista {
+  background-color: #d1d0d0;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+  height: 100%;
   display: flex;
-  align-items: stretch;
+  flex-direction: column;
 }
 
+.Productos_lista img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.informacion-producto {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tituloProducto {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* =========================================
+    FOOTER
+   ========================================= */
+.footer-proper {
+  background-color: #203359;
+  color: #ffffff;
+  padding: 15px;
+  margin-top: 60px;
+}
+
+/* =========================================
+    SECCIÓN QUIÉNES SOMOS Y NOTICIAS
+   ========================================= */
+.container-somos {
+  background-color: #d6d6d6;
+  padding: 10px;
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contacto-gerente {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  width: 60%;
+  margin: 5px auto;
+  text-align: center;
+}
+
+.tarjeta-noticia {
+  background-color: #f8f9fa;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+}
+
+.imagen-noticia {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* =========================================
+    VISTAS DE ADMINISTRADOR (DASHBOARD, TABLAS)
+   ========================================= */
 .container-nav {
   background-color: #203359;
   width: 100%;
@@ -118,10 +163,12 @@ h1 {
 
 .navbar-menu {
   list-style: none;
+  padding-left: 0;
 }
 
 .navbar-menu a {
   color: #d6d6d6;
+  text-decoration: none;
 }
 
 .navbar-menu a:hover {
@@ -155,411 +202,100 @@ h1 {
   margin: 10px auto;
   text-align: center;
   border-radius: 15px;
-
-  background: linear-gradient(90deg,
-      #5ac0d6,
-      #aedfec)
+  background: linear-gradient(90deg, #5ac0d6, #aedfec);
 }
 
-.container-info p {
-  font-family: Montserrat;
-  font-size: 20px;
-}
-
-#saludo {
-  color: #1e3054;
-  padding: 20px;
-  margin-left: 15%;
-}
-
-/* Admin productos */
-
-.container-productos {
-  padding: 20px;
-  width: 90%;
-  margin: 20px auto;
-  text-align: center;
-}
-
-.container-productos h1 {
-  padding-left: 0;
-  margin-bottom: 10px;
-}
-
-.btn-agregar-producto {
-  display: inline-block;
-  background-color: #d6d6d6;
-  color: #203359;
-  border: none;
-  font-family: Montserrat;
-  border-radius: 10px;
-  padding: 10px 15px;
-  margin-top: 25px;
-  text-decoration: none;
-}
-
-.btn-agregar-producto:hover {
-  background-color: #203359;
-  color: white;
-}
-
-.tabla-productos {
-  width: 100%;
-  box-shadow: 0 4px 15px #d6d6d6;
-}
-
-.tabla-productos thead {
-  background-color: #203359;
-  color: white;
-}
-
-.tabla-productos th {
-  padding: 15px;
-  text-align: center;
-  font-family: Montserrat;
-}
-
-.tabla-productos td {
-  padding: 15px;
-  text-align: center;
-  font-family: Montserrat;
-  border-bottom: 1px solid #d6d6d6;
-}
-
-.btn-editar {
-  background-color: #d6d6d6;
-  color: #203359;
-  border: none;
-  border-radius: 8px;
-}
-
-.btn-editar:hover {
-  background-color: #203359;
-  color: white;
-}
-
+#saludo,
 #titulo {
   color: #1e3054;
   padding: 20px;
-  margin: 20px 90px;
 }
 
-/* Admin página clientes */
-
-.container-clientes {
-  padding: 20px;
-  width: 90%;
-  margin: 20px auto;
-  text-align: center;
-}
-
-.container-clientes h1 {
-  padding-left: 0;
-  margin-bottom: 10px;
-}
-
-.btn-agregar-cliente {
-  display: inline-block;
-  background-color: #d6d6d6;
-  color: #203359;
-  border: none;
-  font-family: Montserrat;
-  border-radius: 10px;
-  padding: 10px 15px;
-  margin-top: 25px;
-  text-decoration: none;
-}
-
-.btn-agregar-cliente:hover {
-  background-color: #203359;
-  color: white;
-}
-
+/* Tablas Admin */
+.tabla-productos,
 .tabla-clientes {
   width: 100%;
   box-shadow: 0 4px 15px #d6d6d6;
+  margin-bottom: 20px;
 }
 
+.tabla-productos thead,
 .tabla-clientes thead {
   background-color: #203359;
   color: white;
 }
 
-.tabla-clientes th {
+.tabla-productos th,
+.tabla-clientes th,
+.tabla-productos td,
+.tabla-clientes td {
   padding: 15px;
   text-align: center;
-  font-family: Montserrat;
-}
-
-.tabla-productos td {
-  padding: 15px;
-  text-align: center;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   border-bottom: 1px solid #d6d6d6;
 }
 
-.btn-editar {
+.btn-editar,
+.btn-agregar-producto,
+.btn-agregar-cliente {
   background-color: #d6d6d6;
   color: #203359;
   border: none;
   border-radius: 8px;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.btn-editar:hover {
+.btn-editar:hover,
+.btn-agregar-producto:hover,
+.btn-agregar-cliente:hover {
   background-color: #203359;
   color: white;
 }
 
-/*Benja*/
-/* Fonts */
-
-body {
-  background-color: white;
+/* =========================================
+    ESTILOS PERSONALIZADOS PROPER (NUEVOS)
+   ========================================= */
+.text-proper {
+  color: #203359 !important;
 }
 
-/* Nav */
-
-.navbar-proper {
+.btn-proper {
   background-color: #203359;
+  color: white;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
 }
 
-.navbar-proper .nav-link {
-  color: #d6d6d6;
-}
-
-.navbar-proper .nav-link:hover {
+.btn-proper:hover {
+  background-color: #15233f;
   color: white;
 }
 
-#logo-color-img-nav {
-  width: 100px;
-  margin: 10px;
+.login-wrapper {
+  background-color: #f4f7f6;
+  min-height: 100vh;
 }
 
-
-/* Registro */
-
-.registro-titulo {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.container-form {
-  background-color: #d6d6d6;
-  padding: 50px;
-  margin: 30px;
-  border-radius: 15px;
-}
-
-/* Inicio Sesión */
-
-.login-titulo {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-#logo-proper {
-  width: 250px;
-  margin: 0 auto;
-  display: block;
-}
-
-/* Contacto */
-
-.contacto-titulo {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-
-/*Benja*/
-/* Incio Sesión y Registrar (Benja)*/
-
-#contenedor_carta {
-  width: 200px;
-  text-align: center;
-
-}
-
-.container {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 30px;
-
-
-}
-
-.Productos_lista {
-  background-color: #d1d0d0;
-  margin-bottom: 24px;
-  border-radius: 6px;
-  padding: 12px;
-  text-align: center;
-
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.informacion-producto {
-  font-size: 15px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-
-}
-
-.Productos_lista img {
+.login-card {
+  max-width: 450px;
   width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 5px;
-
+  border-radius: 20px;
+  transition: transform 0.3s ease;
 }
 
-footer {
-  display: block;
+.login-card:hover {
+  transform: translateY(-5px);
 }
 
-
-
-/* Configuración de productos*/
-
-.container-fluid h1 {
-  font-family: Montserrat;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 70px;
-  margin-bottom: 20px;
-
+.login-logo {
+  height: 110px;
+  object-fit: contain;
 }
 
-.tituloProducto {
-  font-size: 25px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.footer-proper {
-  background-color: #203359;
-  color: #ffffff;
-  padding: 15px;
-  margin-top: 60px;
-}
-
-h5 {
-  color: #203359;
-
-}
-
-.container-form {
-  background-color: #d6d6d6;
-  padding: 50px;
-  margin: 30px;
-  border-radius: 15px;
-}
-
-.container-informacion {
-  background-color: #d6d6d6;
-  float: right;
-  padding: 50px;
-  margin: 30px;
-  border-radius: 15px;
-}
-
-.container.titulo {
-  background-color: #1e3054;
-  text-align: center;
-  background-position: center;
-}
-
-.contener-gerente {
-  background-color: #203359;
-
-}
-
-.navbar-proper2 {
-  background-color: #fefeff;
-}
-
-/* Quienes somos */
-
-.container-somos {
-  background-color: #d6d6d6;
-  padding: 10px;
-  width: 90%;
-  margin: 20px auto;
-  text-align: center;
-  border-radius: 15px;
-  font-family: Montserrat;
-}
-
-
-.contacto-gerente {
-  font-family: Montserrat;
-  padding: 10px;
-  width: 60%;
-  margin: 5px auto;
-  text-align: center;
-
-}
-
-.carousel-slide {
-  max-width: 1800px;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.titulo-principal {
-  text-align: center;
-  font-weight: bold;
-  /* Equivale a mb-5 */
-}
-
-
-
-/*ESTILO DE NOTICIAS.HTML*/
-.tarjeta-noticia {
-  background-color: #f8f9fa;
-  margin-bottom: 3rem;
-  padding: 1.5rem;
-
-}
-
-.titulo-noticia {
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.texto-noticia {
-  margin-bottom: 1.5rem;
-}
-
-/* Estilo del botón selector */
-.select-noticia {
-  width: 50%;
-  font-weight: bold;
-  border-radius: 0;
-
-}
-
-
-/* Estilo de la imagen */
-.imagen-noticia {
-  width: 100%;
-  max-width: 100%;
-}
-
-.btn-info {
-  background-color: #203359;
-  color: #ffffff;
-  border: none;
-}
-
-.btn-info:hover {
-  background-color: #1a2947;
-  color: #ffffff;
+/* Mejora el foco de los inputs de Bootstrap */
+.form-control:focus {
+  border-color: #203359;
+  box-shadow: 0 0 0 0.25rem rgba(32, 51, 89, 0.25);
 }
