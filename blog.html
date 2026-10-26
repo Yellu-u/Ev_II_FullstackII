@@ -1,215 +1,162 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Videojuegos</title>
-    <!-- Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> -->
-    <link href="/assets/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <title>ProperChile</title>
 </head>
 
-<body>
-    <!-- Navbar Superior -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="https://via.placeholder.com/40" alt="Logo" class="d-inline-block align-text-top">
-            </a>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarTopContent">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-            </div>
-            <div class="d-flex">
-                <a href="/iniciar-sesion.html" class="btn btn-outline-primary ms-2">Iniciar Sesión</a>
-                <a href="/crear-sesion.html" class="btn btn-primary ms-2">Crear Cuenta</a>
-                <button class="btn btn-primary d-lg-none ms-2" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasMobileMenu" aria-controls="offcanvasMobileMenu">
-                    <span class="navbar-toggler-icon text-white"></span>
-                </button>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Navbar Inferior (solo visible en pantallas grandes) -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary d-none d-lg-block">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse justify-content-center" id="navbarBottomContent">
+
+
+
+<body>
+
+    <body>
+        <!-- Navegador Superior -->
+        <nav class="navbar navbar-expand-sm navbar-proper">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <img id="logo-color-img-nav" src="../assets/img/logos/logocolor.png" alt="logo-proper-color">
+                </div>
+
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Categorías
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/categorias.html">Acción</a></li>
-                            <li><a class="dropdown-item" href="/categorias.html">Aventura</a></li>
-                            <li><a class="dropdown-item" href="/categorias.html">Estrategia</a></li>
-                        </ul>
+                        <a class="nav-link" href="../usuario/main.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/ofertas.html">Ofertas</a>
+                        <a class="nav-link" href="../usuario/productos.html">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="../usuario/nosotros.html">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/blog.html"><strong>Blog</strong></a>
+                        <a class="nav-link" href="../usuario/contacto.html">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contacto.html">Contacto</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="btn btn-success ms-5" href="/carrito.html"><strong><i class="bi bi-cart4"></i> Carrito <span class=""> <strong>$5.000</strong></span>
-                        </strong></a>
+                        <a class="nav-link" href="../usuario/blog.html">Blogs</a>
                     </li>
                 </ul>
+
+                <!-- Se deja en standby el carrito-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../usuario/carrito.html"><span id="contador-carrito" class="badge bg-primary">0</span>
+                            Carrito</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Inicio Sesión Y Registrar -->
+        <div class="container mt-3 mb-2">
+            <div class="text-end">
+                <a href="login.html">Iniciar sesión</a> | <a href="registro.html">Registrar usuario</a>
             </div>
         </div>
-    </nav>
 
-    <!-- Offcanvas para móviles -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMobileMenu"
-        aria-labelledby="offcanvasMobileMenuLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasMobileMenuLabel">Menú</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
 
-            <div class="card">
-                <div class="row g-0">
-                    <div class="col-4 d-flex align-items-center justify-content-center">
-                        <!-- <img src="https://via.placeholder.com/80" alt="Avatar" class="avatar rounded-pill"> -->
-                        <img src="https://avatars.githubusercontent.com/u/138630362" alt="Avatar"
-                            class="avatar rounded-pill">
 
-                    </div>
-                    <div class="col-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Nombre del Usuario</h5>
-                            <p class="card-text">correo@ejemplo.com</p>
-                            <div class="d-flex justify-content-between">
-                                <a href="/#" class="btn btn-primary btn-sm">Ver Perfil</a>
-                                <a href="/#" class="btn btn-danger btn-sm">Cerrar Sesión</a>
-                            </div>
-                        </div>
-                    </div>
+
+
+        <!-- SECCIÓN DE NOTICIAS IMPORTANTES -->
+        <div class="container my-5">
+            <h2 class="titulo-principal">NOTICIAS IMPORTANTES</h2>
+
+            <!-- NOTICIA 1 -->
+            <div class="row align-items-center tarjeta-noticia">
+
+                <div class="col-md-6">
+                    <h3 class="titulo-noticia">Proveedor Oficial del Ejército de Chile</h3>
+                    <h5>"Disciplina y limpieza de nivel institucional"</h5>
+                    <p>
+                        Nos enorgullece ser proveedores oficiales de limpieza y sanitización para la academia del
+                        Ejército de Chile. Productos de alto rendimiento que cumplen con las exigencias más altas.
+                    </p>
+                    <a href="#" class="btn boton-noticia">VER CASO</a>
+
                 </div>
-            </div>
 
-            <div class="d-flex my-3">
-                <a href="/iniciar-sesion.html" class="btn btn-outline-primary ms-2">Iniciar Sesión</a>
-                <a href="/crear-sesion.html" class="btn btn-primary ms-2">Crear Cuenta</a>
+                <!-- Columna Derecha (Imagen) -->
+                <div class="col-md-6">
+                    <img src="../assets/img/blog/militar.jpg" alt="Caso Curioso 1" class="imagen-noticia">
+                </div>
+
             </div>
 
 
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    Categorías
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse show"
-                                data-bs-parent="#accordionFlushExample">
-                                <ul class="list-group">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Cras justo odio
-                                        <span class="badge bg-primary rounded-pill">14</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Cras justo odio
-                                        <span class="badge bg-primary rounded-pill">14</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Cras justo odio
-                                        <span class="badge bg-primary rounded-pill">14</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item"><a href="/#" class="link-none">Ofertas</a></li>
-                <li class="list-group-item"><a href="/#" class="link-none">Historial</a></li>
-            </ul>
-        </div>
-    </div>
+            <!-- NOTICIA 2 -->
+            <div class="row align-items-center tarjeta-noticia">
 
-    <!-- Blogs -->
-    <section id="categorias" class="py-5">
-        <div class="container">
-            <h2 class="mb-4">Blogs</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Acción">
-                        <div class="card-body">
-                            <h5 class="card-title">Acción</h5>
-                            <p class="card-text">Juegos llenos de adrenalina y emoción.</p>
-                            <a href="/blog-items.html" class="btn btn-primary">Explorar</a>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <h3 class="titulo-noticia">Alianza Estratégica / Proveedor Oficial</h3>
+                    <h5>¡PROPER y [Nombre de la Empresa] unen fuerzas!</h5>
+                    <p>
+                        Nos enorgullece anunciar que ahora somos el proveedor oficial de limpieza y sanitización de
+                        [Nombre de la Empresa]. Juntos, garantizando espacios impecables y seguros.
+                    </p>
+                    <a href="#" class="btn boton-noticia">VER CASO</a>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Aventura">
-                        <div class="card-body">
-                            <h5 class="card-title">Aventura</h5>
-                            <p class="card-text">Explora mundos fascinantes y vive historias épicas.</p>
-                            <a href="/blog-items.html" class="btn btn-primary">Explorar</a>
-                        </div>
-                    </div>
+
+                <!-- Columna Derecha (Imagen) -->
+                <div class="col-md-6">
+                    <img src="../assets/img/blog/alianza.jpg" alt="Caso Curioso 1" class="imagen-noticia">
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Estrategia">
-                        <div class="card-body">
-                            <h5 class="card-title">Estrategia</h5>
-                            <p class="card-text">Desafía tu mente con estos juegos estratégicos.</p>
-                            <a href="/blog-items.html" class="btn btn-primary">Explorar</a>
-                        </div>
-                    </div>
+
+            </div>
+
+
+
+            <!-- NOTICIA 3 -->
+            <div class="row align-items-center tarjeta-noticia">
+
+                <div class="col-md-6">
+                    <h3 class="titulo-noticia">Lanzamiento de Combos o Kits Especiales</h3>
+                    <h5>¡Lleva la experiencia PROPER en formato Kit!</h5>
+                    <p>
+                        Simplifica tu rutina con nuestros nuevos "Kits de Limpieza Inteligente".
+                        Hemos combinado nuestros mejores productos para tu hogar, auto o negocio a un precio especial.
+                        ¡Descúbrelos y ahorra!
+                    </p>
+                    <a href="#" class="btn boton-noticia">VER CASO</a>
+                </div>
+
+                <!-- Columna Derecha (Imagen) -->
+                <div class="col-md-6 ">
+                    <img src="../assets/img/blog/kits.jpg" alt="Caso Curioso 1" class="imagen-noticia">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Secció de links de fotos -->
+        Foto de <a
+            href="https://unsplash.com/es/@thesilvafocus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daniel
+            Silva</a> en <a
+            href="https://unsplash.com/es/fotos/un-grupo-de-militares-parados-uno-al-lado-del-otro-xIrlPx0GmBA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        Foto de <a
+            href="https://unsplash.com/es/@hirmin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Max
+            Foto de Kleinen</a> en <a
+            href="https://unsplash.com/es/fotos/bola-clara-en-la-palma-de-la-mano-JVOURXLmlT0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        Foto de <a
+            href="https://unsplash.com/es/@radission?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Radission
+            US</a> en <a
+            href="https://unsplash.com/es/fotos/dos-personas-dandose-la-mano-frente-a-una-computadora-portatil-_XeQ8XEWb4Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+        <!-- Footer de Proper -->
+        <footer class="footer-proper">
+            <div class="container text-center">
+                <h2>PROPER CHILE</h2>
+                <p class="mb-1">&copy Proper Chile. Fabricación Chilena de Excelencia.</p>
+                <div class="footer-links">
+                    <a href="#">Inicio</a>|<a href="#">Nostros</a>|<a href="#">Contacto</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="bg-dark text-light text-center py-3">
-        <!-- Mapa responsivo -->
-        <div class="container-fluid">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d795.8652023171296!2d-70.6151711566251!3d-33.4328796238235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c586497835ad%3A0xa929ba68e1ac6051!2sDuoc%20UC%20Casa%20Central!5e1!3m2!1ses!2scl!4v1722850059541!5m2!1ses!2scl" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-        <p>&copy; 2030 Tienda de Videojuegos</p>
-    </footer>
-
-
-    <!-- Bootstrap JS and dependencies -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
-    
-    <script src="/assets/jquery-3.6.0.min.js"></script>
-    <script src="/assets/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="/assets/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+        </footer>
+    </body>
 
 </html>

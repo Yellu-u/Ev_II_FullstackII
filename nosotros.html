@@ -2,311 +2,575 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Videojuegos</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
-
-    <style>
-        body {
-            background: #f3f3f3;
-        }
-
-        .nav-card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.2s;
-            padding: 15px;
-            cursor: pointer;
-        }
-
-        .nav-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .nav-card i {
-            font-size: 24px;
-            color: #007bff;
-        }
-
-        .nav-card a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-
-        .card {
-            background-color: #f8f9fa;
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-        }
-
-        .card-title {
-            font-family: 'Roboto', sans-serif;
-            font-weight: bold;
-            color: #343a40;
-        }
-
-        .{
-            font-family: 'Roboto', sans-serif;
-            font-size: 1.1rem;
-            color: #6c757d;
-        }
-
-        .card-text {
-            font-family: 'Open Sans', sans-serif;
-            color: #495057;
-            line-height: 1.6;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
-
-        .card-img-top {
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-    </style>
+    <title>ProperChile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-    <!-- Navbar Superior -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- Navegador Superior -->
+    <nav class="navbar navbar-expand-sm navbar-proper">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="https://via.placeholder.com/40" alt="Logo" class="d-inline-block align-text-top">
-            </a>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarTopContent">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-            </div>
-            <div class="d-flex">
-                <a href="/iniciar-sesion.html" class="btn btn-outline-primary ms-2">Iniciar Sesión</a>
-                <a href="/crear-sesion.html" class="btn btn-primary ms-2">Crear Cuenta</a>
-            </div>
-        </div>
-    </nav>
 
-    <div class="text-center">
-        <!-- Botón de menú móvil (solo visible en pantallas pequeñas) -->
-        <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasMobileMenu" aria-controls="offcanvasMobileMenu">
-            <span class="navbar-toggler-icon"></span> Menú
-        </button>
-    </div>
-
-    <!-- Navbar Inferior (solo visible en pantallas grandes) -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary d-none d-lg-block">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse justify-content-center" id="navbarBottomContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="/#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Categorías
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/categorias.html">Acción</a></li>
-                            <li><a class="dropdown-item" href="/categorias.html">Aventura</a></li>
-                            <li><a class="dropdown-item" href="/categorias.html">Estrategia</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/ofertas.html">Ofertas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/nosotros.html"><strong>Nosotros</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contacto.html">Contacto</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="btn btn-success ms-5" href="/carrito.html"><strong><i class="bi bi-cart4"></i> Carrito <span class=""> <strong>$5.000</strong></span>
-                        </strong></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Offcanvas para móviles -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMobileMenu"
-        aria-labelledby="offcanvasMobileMenuLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasMobileMenuLabel">Menú</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-
-            <div class="card">
-                <div class="row g-0">
-                    <div class="col-4 d-flex align-items-center justify-content-center">
-                        <!-- <img src="https://via.placeholder.com/80" alt="Avatar" class="avatar rounded-pill"> -->
-                        <img src="https://avatars.githubusercontent.com/u/138630362" alt="Avatar"
-                            class="avatar rounded-pill">
-
-                    </div>
-                    <div class="col-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Nombre del Usuario</h5>
-                            <p class="card-text">correo@ejemplo.com</p>
-                            <div class="d-flex justify-content-between">
-                                <a href="/#" class="btn btn-primary btn-sm">Ver Perfil</a>
-                                <a href="/#" class="btn btn-danger btn-sm">Cerrar Sesión</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="navbar-header">
+                <img id="logo-color-img-nav" src="../assets/img/logos/logocolor.png" alt="logo-proper-color">
             </div>
 
-            <div class="d-flex my-3">
-                <a href="/iniciar-sesion.html" class="btn btn-outline-primary ms-2">Iniciar Sesión</a>
-                <a href="/crear-sesion.html" class="btn btn-primary ms-2">Crear Cuenta</a>
-            </div>
-
-
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                    aria-controls="flush-collapseOne">
-                                    Categorías
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse show"
-                                data-bs-parent="#accordionFlushExample">
-                                <ul class="list-group">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Cras justo odio
-                                        <span class="badge bg-primary rounded-pill">14</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Cras justo odio
-                                        <span class="badge bg-primary rounded-pill">14</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Cras justo odio
-                                        <span class="badge bg-primary rounded-pill">14</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../usuario/main.html">Home</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../usuario/productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../usuario/nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../usuario/contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../usuario/blog.html">Blogs</a>
+                </li>
+            </ul>
 
-                <li class="list-group-item"><a href="/#" class="link-none">Ofertas</a></li>
-                <li class="list-group-item"><a href="/#" class="link-none">Historial</a></li>
+            <!-- Se deja en standby el carrito-->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../usuario/carrito.html"><span id="contador-carrito" class="badge bg-primary">0</span>
+                        Carrito</a></li>
             </ul>
         </div>
-    </div>
+    </nav>
 
-    <div class="container my-5">    
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <img src="/assets/img/banner2.png" class="card-img-top" alt="Videojuegos Retro">
-                    <div class="card-body">
-                        <h4 class="card-title text-center mb-3">🎮 Historia de RetroGaming Haven</h4>
-                        <h4 class="mb-2 text-muted">Un Viaje al Pasado 🚀</h4>
-                        <p class="card-text">
-                            RetroGaming Haven nació en el año 2010, en un pequeño local del centro de la ciudad, fundado por dos amigos apasionados por los videojuegos de su infancia. Con un sueño compartido de revivir la emoción de las consolas y juegos clásicos, comenzaron a coleccionar, restaurar y vender videojuegos y consolas retro.
-                        </p>
-                        <h4 class="mb-2 text-muted">Crecimiento y Comunidad 🌟</h4>
-                        <p class="card-text">
-                            Con el tiempo, RetroGaming Haven se ganó la reputación de ser un santuario para los amantes de los videojuegos clásicos. Organizamos eventos temáticos y torneos que reúnen a jugadores de todas las edades para compartir su amor por los juegos de antaño. Nuestra comunidad creció rápidamente, y en 2015, inauguramos nuestra tienda en línea, permitiendo que los aficionados de todo el mundo accedan a nuestro catálogo de tesoros retro.
-                        </p>
-                        <h4 class="mb-2 text-muted">🎯 Misión</h4>
-                        <p class="card-text">
-                            Nuestra misión es preservar y celebrar la rica historia de los videojuegos, ofreciendo una experiencia única y nostálgica a nuestros clientes. Nos esforzamos por ser un puente entre generaciones, proporcionando productos de calidad y servicios excepcionales a los coleccionistas y entusiastas del gaming clásico.
-                        </p>
-                        <h4 class="mb-2 text-muted">🔮 Visión</h4>
-                        <p class="card-text">
-                            En RetroGaming Haven, soñamos con ser líderes mundiales en el mercado de videojuegos retro, comprometidos con la innovación y la expansión de nuestra comunidad global. Buscamos ser el destino predilecto para quienes desean revivir y compartir los momentos dorados del pasado del gaming.
-                        </p>
-                        <h4 class="mb-2 text-muted">🚀 Innovación Continua</h4>
-                        <p class="card-text">
-                            A lo largo de los años, hemos ampliado nuestra oferta para incluir servicios de reparación y restauración de consolas, así como una línea exclusiva de merchandising inspirado en los clásicos del videojuego. En el futuro, planeamos lanzar una serie de documentales que exploren la evolución de los videojuegos y su impacto en la cultura popular.
-                        </p>
-                        
+    <!-- Cuerpo de Productos -->
 
-                        <div class="text-center">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <img src="/assets/img/face-programador2.png" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="">
-                                    <h2 class="fw-normal">Joseph</h2>
-                                    <small><strong>Programador</strong></small>
-                                    <p>Estudiante de segundo año de analista en Duoc UC.</p>
 
-                                    <!-- añadir perfiles de redes sociales -->
-                                    <div class="d-flex justify-content-center">
-                                        <a href="https://github.com/pedrohacker20" class="btn btn-dark btn-sm"><i class="bi bi-github"></i></a>
-                                        <a href="https://www.linkedin.com/feed/" class="btn btn-dark btn-sm mx-2"><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <img src="/assets/img/Luna.png" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="">
-                                    <h2 class="fw-normal">Luna </h2>
-                                    <small><strong>Scrum Master</strong></small>
-                                    <p>Estudiante de Ingeniería en Informática, TechLead y Junior Frontend.</p>
-                                    <div class="d-flex justify-content-center">
-                                        <a href="https://github.com/pedrohacker20" class="btn btn-dark btn-sm"><i class="bi bi-github"></i></a>
-                                        <a href="https://www.linkedin.com/feed/" class="btn btn-dark btn-sm mx-2"><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <img src="/assets/img/pedro.png" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="">
-                                    <h2 class="fw-normal">Pedro</h2>
-                                    <small><strong>Programador</strong></small>
-                                    <p>Estudiante de informática Duoc UC 🎮 Me gusta programar.</p>
-                                    <div class="d-flex justify-content-center">
-                                        <a href="https://github.com/pedrohacker20" class="btn btn-dark btn-sm"><i class="bi bi-github"></i></a>
-                                        <a href="https://www.linkedin.com/feed/" class="btn btn-dark btn-sm mx-2"><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
+
+    <!-- Sección de productos -->
+    <div class="container-fluid">
+        <div class="row g-4">
+            <h1> PRODUCTOS </h1>
+            <p id="mensaje-confirmacion" class="text-center fs-5"></p>
+
+            <!-- 1° Producto-->
+            <div class="col-3">
+                <div class="Productos_lista">
+                    <img src="../assets/img/main/super-plus2.jpg" alt="Producto 1">
+                    <br><br>
+                    <a href="#" class="tituloProducto">SUPER PLUS</a>
+                    <div class="informacion-producto">
+                        <span>Removedor y eliminador de ceras</span>
+                        <br><br>
+                        <p>Es un detergente para vajillas con una pontente fórmula de eliminación de residuos de comida
+                            y grasas, contiene elementos protectores y suavizantes para tus manos.
+                        </p>
+                        <p>$10.000</p>
+                        <button type="button"
+                            onclick="agregarAlCarrito(1, 'SUPER PLUS', 10000, 'Detergente para vajillas y eliminación de grasa')">
+                            Añadir al carrito
+                        </button>
+                        <br>
+                        <button class="btn btn-informacion"
+                            onclick="verDetalle('../assets/img/main/super-plus2.jpg', 'SUPER PLUS', 'Removedor y eliminador de ceras', 'Es un detergente para vajillas...', 10000, 1)">
+                            Ver detalle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2° Producto-->
+            <div class="col-sm-3">
+                <div class="Productos_lista">
+                    <img src="../assets/img/main/cloro-gel2.png" alt="Cloro Gel">
+                    <br><br>
+                    <a href="#" class="tituloProducto">CLORO GEL</a>
+                    <div class="informacion-producto">
+                        <span>Removedor y eliminador de ceras</span>
+                        <br><br>
+                        <p>Limpieza profunda para baños y cocinas, sin salpicaduras y con agradable aroma a lavanda,
+                            su composición permite adherirse más tiempo en contacto con múltiples superficies.
+                        </p>
+                        <p>$12.000</p>
+                        <button type="button"
+                            onclick="agregarAlCarrito(2, 'CLORO GEL', 12000, 'Limpieza profunda para baños y cocinas')">
+                            Añadir al carrito
+                        </button>
+                        <br>
+                        <button class="btn btn-informacion"
+                            onclick="verDetalle('../assets/img/main/cloro-gel2.png', 'CLORO GEL', 'Removedor y eliminador de ceras', 'Limpieza profunda para baños y cocinas, sin salpicaduras...', 12000, 2)">
+                            Ver detalle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3° Producto-->
+            <div class="col-sm-3">
+                <div class="Productos_lista">
+                    <img src="../assets/img/main/cera-spray2.jpg" alt="Producto 3">
+                    <br><br>
+                    <a href="#" class="tituloProducto">CERA SPRAY</a>
+                    <div class="informacion-producto">
+                        <span>Cera Líquida para Autos</span>
+                        <br><br>
+                        <p>Cera Spray es ideal luego del lavado. Brinda protección y sus aceites realzan la pintura,
+                            dejando textura suave. Para mejor resultado, aplique a la sombra.
+                        </p>
+                        <p>$20.000</p>
+                        <button type="button"
+                            onclick="agregarAlCarrito(3, 'CERA SPRAY', 20000, 'Cera Líquida para Autos')">
+                            Añadir al carrito
+                        </button>
+                        <br>
+                        <button class="btn btn-informacion"
+                            onclick="verDetalle('../assets/img/main/cera-spray2.jpg', 'CERA SPRAY', 'Cera Líquida para Autos', 'Cera Spray es ideal luego del lavado. Brinda protección...', 20000, 3)">
+                            Ver detalle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4° Producto-->
+            <div class="col-sm-3">
+                <div class="Productos_lista">
+                    <img src="../assets/img/main/motor-grass2.jpg" alt="Producto 4 ">
+                    <br><br>
+                    <a href="#" class="tituloProducto">MOTOR GRASS</a>
+                    <div class="informacion-producto">
+                        <span>Desengrasante alto poder</span>
+                        <br><br>
+                        <p>Es un desengrasante alcalino con alto poder limpiador que elimina la grasa más difícil.
+                            Su fórmula de rápida acción y fácil enjuague evita adherir residuos.
+                        </p>
+                        <p>$12.000</p>
+                        <button type="button"
+                            onclick="agregarAlCarrito(4, 'MOTOR GRASS', 12000, 'Desengrasante alto poder')">
+                            Añadir al carrito
+                        </button>
+                        <br>
+                        <button class="btn btn-informacion"
+                            onclick="verDetalle('../assets/img/main/motor-grass2.jpg', 'MOTOR GRASS', 'Desengrasante alto poder', 'Es un desengrasante alcalino con alto poder limpiador...', 12000, 4)">
+                            Ver detalle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5° Producto-->
+            <div class="col-sm-3">
+                <div class="Productos_lista">
+                    <img src="../assets/img/main/full-tapiz2.jpg" alt="Producto 5">
+                    <br><br>
+                    <a href="#" class="tituloProducto">FULL TAPIZ</a>
+                    <div class="informacion-producto">
+                        <span>Shampoo para alfombra y tapices</span>
+                        <br><br>
+                        <p>Shampoo para alfombras y tapices con humectantes y abrillantadores ópticos.
+                            Según su dilución, limpia en seco o húmedo. Puede usarse de forma manual o mecánica.
+                        </p>
+                        <p>$8.000</p>
+                        <button type="button"
+                            onclick="agregarAlCarrito(5, 'FULL TAPIZ', 8000, 'Shampoo para alfombra y tapices')">
+                            Añadir al carrito
+                        </button>
+                        <br>
+                        <button class="btn btn-informacion"
+                            onclick="verDetalle('../assets/img/main/full-tapiz2.jpg', 'FULL TAPIZ', 'Shampoo para alfombra y tapices', 'Shampoo para alfombras y tapices con humectantes...', 8000, 5)">
+                            Ver detalle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6° Producto-->
+            <div class="col-sm-3">
+                <div class="Productos_lista">
+                    <img src="../assets/img/main/matic2.jpg" alt="Producto 6">
+                    <br><br>
+                    <a href="#" class="tituloProducto">MATIC</a>
+                    <div class="informacion-producto">
+                        <span>Detergente líquido (Línea Hogar)</span>
+                        <br><br>
+                        <p>Detergente ecológico que limpia profundamente tu ropa.
+                            Sus bioenzimas eliminan suciedad y manchas muy rebeldes, dejándola impecable,
+                            lista para usar con un agradable aroma fresco.
+                        </p>
+                        <p>$15.000</p>
+                        <button type="button"
+                            onclick="agregarAlCarrito(6, 'MATIC', 15000, 'Detergente líquido (Línea Hogar)')">
+                            Añadir al carrito
+                        </button>
+                        <br>
+                        <button class="btn btn-informacion"
+                            onclick="verDetalle('../assets/img/main/matic2.jpg', 'MATIC', 'Detergente líquido (Línea Hogar)', 'Detergente ecológico que limpia profundamente tu ropa...', 15000, 6)">
+                            Ver detalle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7° Producto-->
+            <div class="col-sm-3">
+                <div class="Productos_lista">
+                    <img src="../assets/img/main/aroma2.jpg" alt="Producto 7">
+                    <br><br>
+                    <a href="#" class="tituloProducto">AROMA FRESH CAR</a>
+                    <div class="informacion-producto">
+                        <span>Aromatizante (Línea automotriz)</span>
+                        <br><br>
+                        <p>Aromatizante hidroalcohólico para interiores de vehículos.
+                            Elaborado con finas esencias, agua desionizada y alcohol de perfumería,
+                            logra mantener siempre un entorno agradable y muy prolongado.
+                        </p>
+                        <p>$12.000</p>
+                        <button type="button"
+                            onclick="agregarAlCarrito(7, 'AROMA FRESH CAR', 12000, 'Aromatizante (Línea automotriz)')">
+                            Añadir al carrito
+                        </button>
+                        <br>
+                        <button class="btn btn-informacion"
+                            onclick="verDetalle('../assets/img/main/aroma2.jpg', 'AROMA FRESH CAR', 'Aromatizante (Línea automotriz)', 'Aromatizante hidroalcohólico para interiores de vehículos...', 12000, 7)">
+                            Ver detalle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8° Producto-->
+            <div class="col-sm-3">
+                <div class="Productos_lista">
+                    <img src="../assets/img/main/remantex2.jpg" alt="Producto 8">
+                    <br><br>
+                    <a href="#" class="tituloProducto">REMANTEX</a>
+                    <div class="informacion-producto">
+                        <span>Eliminador de manchas (Casino y restaurant)</span>
+                        <br><br>
+                        <p>Líquido ideal para desmanchar alfombras, tapices y telas.
+                            Sus agentes y detergentes emulsionan la suciedad rebelde, permitiendo
+                            realizar un lavado completo, sea manual o mecánico.
+                        </p>
+                        <p>$15.000</p>
+                        <button type="button"
+                            onclick="agregarAlCarrito(8, 'REMANTEX', 15000, 'Eliminador de manchas (Casino y restaurant)')">
+                            Añadir al carrito
+                        </button>
+                        <br>
+                        <button class="btn btn-informacion"
+                            onclick="verDetalle('../assets/img/main/remantex2.jpg', 'REMANTEX', 'Eliminador de manchas (Casino y restaurant)', 'Líquido ideal para desmanchar alfombras, tapices y telas...', 15000, 8)">
+                            Ver detalle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Accesorios -->
+            <div class="container-fluid">
+                <div class="row g-4">
+                    <h1> ACCESORIOS </h1>
+
+                    <!-- 1° Accesorio-->
+                    <div class="col-3">
+                        <div class="Productos_lista">
+                            <img src="../assets/img/main/carro1.jpg" alt="Accesorio 1">
+                            <br><br>
+                            <a href="#" class="tituloProducto">CARRO ESTRUJADOR 32Lt</a>
+                            <div class="informacion-producto">
+                                <span>Carro Estrujador 32 litros CEM-001</span>
+                                <br><br>
+                                <p>Carro estrujador de agua de polipropileno con
+                                    exprimidor de mopas de posición lateral
+                                </p>
+                                <p>$10.000</p>
+                                <button type="button"
+                                    onclick="agregarAlCarrito(9, 'CARRO ESTRUJADOR 32Lt', 10000, 'Carro Estrujador 32 litros CEM-001')">
+                                    Añadir al carrito
+                                </button>
+                                <br>
+                                <button class="btn btn-informacion"
+                                    onclick="verDetalle('../assets/img/main/carro1.jpg', 'CARRO ESTRUJADOR 32Lt', 'Carro Estrujador 32 litros CEM-001', 'Carro estrujador de agua de polipropileno con exprimidor...', 10000, 9)">
+                                    Ver detalle
+                                </button>
                             </div>
                         </div>
-                     </div>
+                    </div>
+
+                    <!-- 2° Accesorio-->
+                    <div class="col-sm-3">
+                        <div class="Productos_lista">
+                            <img src="../assets/img/main/carro2.jpg" alt="Accesorio 2">
+                            <br><br>
+                            <a href="#" class="tituloProducto">CARRO ESTRUJADOR 19Lt</a>
+                            <div class="informacion-producto">
+                                <span>Carro Estrujador 19 litros CEM-002</span>
+                                <br><br>
+                                <p>Carro estrujador de agua de polipropileno con
+                                    exprimidor de mopas de posición lateral
+                                </p>
+                                <p>$12.000</p>
+                                <button type="button"
+                                    onclick="agregarAlCarrito(10, 'CARRO ESTRUJADOR 19Lt', 12000, 'Carro Estrujador 19 litros CEM-002')">
+                                    Añadir al carrito
+                                </button>
+                                <br>
+                                <button class="btn btn-informacion"
+                                    onclick="verDetalle('../assets/img/main/carro2.jpg', 'CARRO ESTRUJADOR 19Lt', 'Carro Estrujador 19 litros CEM-002', 'Carro estrujador de agua de polipropileno con exprimidor...', 12000, 10)">
+                                    Ver detalle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3° Accesorio-->
+                    <div class="col-sm-3">
+                        <div class="Productos_lista">
+                            <img src="../assets/img/main/guantes1.jpg" alt="Accesorio 3">
+                            <br><br>
+                            <a href="#" class="tituloProducto">GUANTES NITRITO</a>
+                            <div class="informacion-producto">
+                                <span>Guante Verde de Nitrito (S - M - L)</span>
+                                <br><br>
+                                <p>Guante de nitrilo especialmente diseñado para proveer protección química,
+                                    resistencia y versatilidad. Son resistentes a productos cáusticos,
+                                    grasas de animales, aceites e hidrocarburos.
+                                </p>
+                                <p>$20.000</p>
+                                <button type="button"
+                                    onclick="agregarAlCarrito(11, 'GUANTES NITRILO', 20000, 'Guante Verde de Nitrilo (S - M - L)')">
+                                    Añadir al carrito
+                                </button>
+                                <br>
+                                <button class="btn btn-informacion"
+                                    onclick="verDetalle('../assets/img/main/guantes1.jpg', 'GUANTES NITRILO', 'Guante Verde de Nitrilo (S - M - L)', 'Guante de nitrilo especialmente diseñado para proveer protección...', 20000, 11)">
+                                    Ver detalle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4° Accesorio-->
+                    <div class="col-sm-3">
+                        <div class="Productos_lista">
+                            <img src="../assets/img/main/mopamf.jpg" alt="Accesorio 4 ">
+                            <br><br>
+                            <a href="#" class="tituloProducto">MOPA MICROFRIBRA</a>
+                            <div class="informacion-producto">
+                                <span>Mopa Humeda de Microfribra 300 Gramos</span>
+                                <br><br>
+                                <p>Mopa de microfibra con alto poder de absorción, adecuada para la
+                                    limpieza de pisos en general y encerado de estos
+                                </p>
+                                <p>$12.000</p>
+                                <button type="button"
+                                    onclick="agregarAlCarrito(12, 'MOPA MICROFRIBRA', 12000, 'Mopa Humeda de Microfribra 300 Gramos')">
+                                    Añadir al carrito
+                                </button>
+                                <br>
+                                <button class="btn btn-informacion"
+                                    onclick="verDetalle('../assets/img/main/mopamf.jpg', 'MOPA MICROFRIBRA', 'Mopa Humeda de Microfribra 300 Gramos', 'Mopa de microfibra con alto poder de absorción...', 12000, 12)">
+                                    Ver detalle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5° Accesorio-->
+                    <div class="col-sm-3">
+                        <div class="Productos_lista">
+                            <img src="../assets/img/main/mopaseca.jpg" alt="Accesorio 5">
+                            <br><br>
+                            <a href="#" class="tituloProducto">MOPA SECA</a>
+                            <div class="informacion-producto">
+                                <span>MOPA SECA BLANCA SLIP-ON REFORZADA (60cm-90cm)</span>
+                                <br><br>
+                                <p>Mopa seca slip-on ideal para todo tipo de pisos duros tales como
+                                    porcelanato, cerámicos, laminados, Etc.
+                                </p>
+                                <p>$8.000</p>
+                                <button type="button"
+                                    onclick="agregarAlCarrito(13, 'MOPA SECA', 8000, 'Mopa seca blanca slip-on reforzada')">
+                                    Añadir al carrito
+                                </button>
+                                <br>
+                                <button class="btn btn-informacion"
+                                    onclick="verDetalle('../assets/img/main/mopaseca.jpg', 'MOPA SECA', 'MOPA SECA BLANCA SLIP-ON REFORZADA (60cm-90cm)', 'Mopa seca slip-on ideal para todo tipo de pisos duros...', 8000, 13)">
+                                    Ver detalle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6° Accesorio-->
+                    <div class="col-sm-3">
+                        <div class="Productos_lista">
+                            <img src="../assets/img/main/escobillonsi.jpg" alt="Accesorio 6">
+                            <br><br>
+                            <a href="#" class="tituloProducto">ESCOBILLON CERDA</a>
+                            <div class="informacion-producto">
+                                <span>Escobillón Cerda Suave Interior</span>
+                                <br><br>
+                                <p>Escobillón de cerdas suaves son la mejor opción para barrer el polvo y las partículas
+                                    ligeras, indicado para barrer lugares con mayor área libre y pisos encerados (áreas
+                                    internas)
+                                    No incluye mango
+                                </p>
+                                <p>$15.000</p>
+                                <button type="button"
+                                    onclick="agregarAlCarrito(14, 'ESCOBILLON CERDA', 15000, 'Escobillón Cerda Suave Interior')">
+                                    Añadir al carrito
+                                </button>
+                                <br>
+                                <button class="btn btn-informacion"
+                                    onclick="verDetalle('../assets/img/main/escobillonsi.jpg', 'ESCOBILLON CERDA', 'Escobillón Cerda Suave Interior', 'Escobillón de cerdas suaves son la mejor opción...', 15000, 14)">
+                                    Ver detalle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7° Accesorio-->
+                    <div class="col-sm-3">
+                        <div class="Productos_lista">
+                            <img src="../assets/img/main/toalla.jpg" alt="Accesorio 7">
+                            <br><br>
+                            <a href="#" class="tituloProducto">TOALLA FIBRA 29g</a>
+                            <div class="informacion-producto">
+                                <span>TOALLA FIBRA LARGA 29g</span>
+                                <br><br>
+                                <p>Toalla de una hoja, máxima resistencia, excelente absorción
+                                    y calidad superior en 250 metros de papel. Junto a su dispensador
+                                    de palanca permite un menor costo por uso y mayor higiene en tu baño y cocina.
+                                </p>
+                                <p>$12.000</p>
+                                <button type="button"
+                                    onclick="agregarAlCarrito(15, 'TOALLA FIBRA 29g', 12000, 'TOALLA FIBRA LARGA 29g')">
+                                    Añadir al carrito
+                                </button>
+                                <br>
+                                <button class="btn btn-informacion"
+                                    onclick="verDetalle('../assets/img/main/toalla.jpg', 'TOALLA FIBRA 29g', 'TOALLA FIBRA LARGA 29g', 'Toalla de una hoja, máxima resistencia, excelente absorción...', 12000, 15)">
+                                    Ver detalle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8° Accesorio-->
+                    <div class="col-sm-3">
+                        <div class="Productos_lista">
+                            <img src="../assets/img/main/papelh.jpg" alt="Accesorio 8">
+                            <br><br>
+                            <a href="#" class="tituloProducto">PAPEL HIGIENICO</a>
+                            <div class="informacion-producto">
+                                <span>PAPEL HIGIENICO FIBRA LARGA PLUS 21g</span>
+                                <br><br>
+                                <p>Papel higiénico de 500 metros, de alta resistencia y poder de absorción lo que
+                                    favorece menor consumo, producto biodegradable. Destinado para uso diario y en
+                                    distintas instalaciones.
+                                    Utilízala junto a su dispensador para una mayor higiene Presentación: 6 X 500.
+                                </p>
+                                <p>$15.000</p>
+                                <button type="button"
+                                    onclick="agregarAlCarrito(16, 'PAPEL HIGIENICO', 15000, 'PAPEL HIGIENICO FIBRA LARGA PLUS 21g')">
+                                    Añadir al carrito
+                                </button>
+                                <br>
+                                <button class="btn btn-informacion"
+                                    onclick="verDetalle('../assets/img/main/papelh.jpg', 'PAPEL HIGIENICO', 'PAPEL HIGIENICO FIBRA LARGA PLUS 21g', 'Papel higiénico de 500 metros, de alta resistencia...', 15000, 16)">
+                                    Ver detalle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
+
+        <div class="modal fade" id="modalProductoDinamico" tabindex="-1" aria-labelledby="modalTitulo"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitulo"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="modalImagen" src="" class="img-fluid mb-3 rounded" alt="Producto">
+                        <p id="modalSubtitulo" class="fw-bold text-primary"></p>
+                        <p id="modalDescripcion"></p>
+                        <p id="modalPrecio" class="fs-4 fw-bold"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-success" id="modalBtnAgregar" data-bs-dismiss="modal">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer de Proper -->
+        <footer class="footer-proper">
+            <div class="container text-center">
+                <h2>PROPER CHILE</h2>
+                <p class="mb-1">&copy Proper Chile. Fabricación Chilena de Excelencia.</p>
+                <div class="footer-links">
+                    <a href="#">Inicio</a>|<a href="#">Nostros</a>|<a href="#">Contacto</a>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <script>
+            // 1. Función para agregar un producto al carrito
+            function agregarAlCarrito(id, nombre, precio, descripcion) {
+                let carrito = obtenerCarrito();
+
+                const productoExistente = carrito.find(item => item.id === id);
+
+                if (productoExistente) {
+                    productoExistente.cantidad += 1;
+                } else {
+                    carrito.push({
+                        id: id,
+                        nombre: nombre,
+                        precio: precio,
+                        descripcion: descripcion,
+                        cantidad: 1
+                    });
+                }
+            }
+
+
+            function verDetalle(imagen, nombre, subtitulo, descripcion, precio, id) {
+                document.getElementById('modalImagen').src = imagen;
+                document.getElementById('modalTitulo').innerText = nombre;
+                document.getElementById('modalSubtitulo').innerText = subtitulo;
+                document.getElementById('modalDescripcion').innerText = descripcion;
+                document.getElementById('modalPrecio').innerText = `$${precio.toLocaleString('es-CL')}`;
+
+                const btnAgregar = document.getElementById('modalBtnAgregar');
+                btnAgregar.onclick = function () {
+                    agregarAlCarrito(id, nombre, precio, subtitulo);
+                };
+
+                const modal = new bootstrap.Modal(document.getElementById('modalProductoDinamico'));
+                modal.show();
+            }
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
 </body>
 
 </html>

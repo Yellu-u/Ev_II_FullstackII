@@ -2,264 +2,224 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle del Producto</title>
-    <!-- Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> -->
-    <link href="/assets/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
-    <style>
-        .product-img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-        }
-
-        body {
-            background: #f3f3f3;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProperChile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-    <!-- Navbar Superior -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="https://via.placeholder.com/40" alt="Logo" class="d-inline-block align-text-top">
-            </a>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarTopContent">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-sm navbar-proper">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <img id="logo-color-img-nav" src="../assets/img/logos/logocolor.png" alt="logo-proper-color">
+      </div>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../usuario/main.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../usuario/productos.html">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../usuario/nosotros.html">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../usuario/contacto.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../usuario/blog.html">Blogs</a>
+        </li>
+      </ul>
+
+      <!-- Se deja en standby el carrito-->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../usuario/carrito.html"><span class="shopping-cart"></span> Carrito</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--FORMULARIO-->
+  <div class="row">
+    <div class="col-sm-3">
+
+    </div>
+    <div class="col-sm-6">
+      <div class="container-form">
+        <form>
+          <div class="registro-titulo">
+            <h4>REGISTRO DE USUARIO</h4>
+          </div>
+
+          <div class="mb-3">
+            <label for="nombre-completo">NOMBRE COMPLETO</label>
+            <input type="text" class="form-control" id="nombre-completo" placeholder="Ej: Juan Pérez" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="correo">CORREO</label>
+            <input type="email" class="form-control" id="correo" placeholder="juan@ejemplo.com" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="contrasena">CONTRASEÑA</label>
+            <input type="password" class="form-control" id="contrasena" placeholder="Ingresa tu contraseña" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="contrasena">CONFIRMAR CONTRASEÑA</label>
+            <input type="password" class="form-control" id="confirmarcontrasena" placeholder="Repite tu contraseña"
+              required>
+          </div>
+
+          <div class="mb-3">
+            <label for="telefono">TELÉFONO (OPCIONAL)</label>
+            <input type="tel" class="form-control" id="telefono" placeholder="+569 1234 5678">
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="slcregion" class="form-label">-- REGIÓN --</label>
+                <select class="form-control" id="slcregion" required>
+                  <option value="">Seleccione una región</option>
+                </select>
+              </div>
             </div>
-            <div class="d-flex">
-                <a href="/iniciar-sesion.html" class="btn btn-outline-primary ms-2">Iniciar Sesión</a>
-                <a href="/crear-sesion.html" class="btn btn-primary ms-2">Crear Cuenta</a>
+
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="slccomuna" class="form-label">-- COMUNA --</label>
+                <select class="form-control" id="slccomuna" disabled required>
+                  <option value="">Seleccione una comuna</option>
+                </select>
+              </div>
             </div>
-        </div>
-    </nav>
-    
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-md-5 d-none d-md-block">
-                <img src="https://via.placeholder.com/600x400" class="product-img" alt="Producto">
-            </div>
-            <div class="col-md-7">
-                <div class="card text-start ">
-                    <div class="card-body">
-                        <h4 class="card-title">Registro de nuevo usuario</h4>
-                        <p class="card-text">Bienvenidos</p>
-                        <div class="row">
-                            <div class="col-6 mb-3">
-                                <label for="nombre" class="form-label">Run<small
-                                        class="text-danger">*</small></label>
-                                <input type="text" class="form-control" id="nombre" placeholder="ej: 11111111K"
-                                    name="nombre" required>
-                            </div>
-                            <div class="mb-3 col-6 col-md-6">
-                                <label for="fechaNacimiento" class="form-label">Fecha nacimiento<small
-                                        class="text-danger">*</small></label>
-                                <input type="date" class="form-control" id="fechaNacimiento"
-                                    name="fechaNacimiento" required>
-                            </div>
-                            <div class="col-6 mb-3">
-                                <label for="nombre" class="form-label">Nombre<small
-                                        class="text-danger">*</small></label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" required>
-                            </div>
-                            <div class="col-6 mb-3">
-                                <label for="apellidos" class="form-label">Apellidos<small
-                                        class="text-danger">*</small></label>
-                                <input type="text" class="form-control" id="apellidos" name="apellidos"
-                                    required>
-                            </div>
+          </div>
 
-                            <div class="mb-3 col-6">
-                                <label for="correo" class="form-label">Correo<small
-                                        class="text-danger">*</small></label>
-                                <input type="email" class="form-control" id="correo" name="correo" required>
-                            </div>
-
-                            <div class="mb-3 col-6">
-                                <label for="password" class="form-label">Contraseña<small
-                                        class="text-danger">*</small></label>
-                                <input type="password" class="form-control" id="password" name="password"
-                                    required>
-                            </div>
-                        </div>
-
-                        <hr class="w-100">
-                        <h4 class="card-title">Dirección de la entrega de los productos</h4>
-                        <p class="card-text">Ingrese direccion de forma detallada</p>
-                        <div class="row">
-
-                            <div class="mb-3 col-12 col-md-6">
-                                <label for="fechaNacimiento" class="form-label">Calle<small
-                                        class="text-danger">*</small></label>
-                                <input type="text" class="form-control" id="fechaNacimiento"
-                                    name="fechaNacimiento" required>
-                            </div>
-                            <div class="mb-3 col-12 col-md-6">
-                                <label for="fechaNacimiento" class="form-label">Departamento (opcional)</label>
-                                <input type="text" class="form-control" id="fechaNacimiento"
-                                    name="fechaNacimiento" placeholder="Ej: 603">
-                            </div>
-
-                            <div class="mb-3 col-6 col-md-6">
-                                <label for="regionSelect" class="form-label">Región<small
-                                        class="text-danger">*</small></label>
-                                <select class="form-select" id="regionSelect" required>
-                                    <!-- <option value="" disabled selected>Seleccione una región</option> -->
-                                </select>
-                            </div>
-                            <div class="mb-3 col-6 col-md-6">
-                                <label for="comunaSelect" class="form-label">Comuna<small
-                                        class="text-danger">*</small></label>
-                                <select class="form-select" id="comunaSelect" required>
-                                    <!-- <option value="" disabled selected>Seleccione una comuna</option> -->
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="" class="form-label">Indicaciones para la entrega (opcional)</label>
-                                <textarea class="form-control" name="" id="" rows="3"
-                                    placeholder="Ej.: Entre calles, color del edificio, no tiene timbre."></textarea>
-                            </div>
-                        </div>
-
-                        <!-- <div class="mb-3">
-                            <label for="productImage" class="form-label">Imagen del usuario</label>
-                            <input type="file" class="form-control" id="productImage" accept="image/*">
-                        </div> -->
-
-                        <div class="text-end">
-                            <button type="button" class="btn btn-primary"
-                                onclick="handleGuardar()">Guardar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 
-            <h2 class="mb-4 text-center">Nuevo usuario</h2>
-            
-            <form id="loginForm">
-                <div class="col-6 mb-3">
-                    <label for="nombre" class="form-label">Run<small class="text-danger">*</small></label>
-                    <input type="text" class="form-control" id="nombre" placeholder="ej: 11111111K" name="nombre" required>
-                </div>
-                <div class="row">
-                    <div class="col-6 mb-3">
-                        <label for="nombre" class="form-label">Nombre<small class="text-danger">*</small></label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="col-6 mb-3">
-                        <label for="apellidos" class="form-label">Apellidos<small class="text-danger">*</small></label>
-                        <input type="text" class="form-control" id="apellidos" name="apellidos" required>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="correo" class="form-label">Correo<small class="text-danger">*</small></label>
-                    <input type="email" class="form-control" id="correo" name="correo" required>
-                </div>
-                <div class="mb-3">
-                    <label for="fechaNacimiento" class="form-label">Fecha nacimiento<small class="text-danger">*</small></label>
-                    <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required>
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña<small class="text-danger">*</small></label>
-                    <input type="password" class="form-control" id="password" name="password" required>
-                </div>
-                <div class="mb-3">
-                    <label for="otra-password" class="form-label">Repetir Contraseña<small class="text-danger">*</small></label>
-                    <input type="password" class="form-control" id="otra-password" name="otra-password"  required>
-                </div>
-                <button type="submit" class="btn btn-primary w-100"><strong>REGISTRAR</strong></button>
-            </form> -->
-            </div>
-        </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg px-5 mt-4">Registrarse</button>
+          </div>
+        </form>
+      </div>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+    <div class="col-sm-3">
+    </div>
+  </div>
 
-    <script src="/assets/jquery-3.6.0.min.js"></script>
-    <script src="/assets/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="/assets/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="/data/zonas.js"></script>
+  <script>
+    // Se utilizarán solamente las regiones en las que el negocio hace repartos
+    // Para esto crearemos el siguiente objeto, que tendrá como clave el nombre de la región y el arreglo con sus comunas
+    const regionesYComunas =
+    {
+      "Metropolitana de Santiago":
+        ["Santiago", "Providencia", "Las condes", "Vitacura", "Lo Barnechea", "Ñunoa", "La Reina",
+          "La Granja", "San Ramón", "El Bosque", "La Pintana", "La Florida", "Peñalolén", "Maipú", "Cerrillos", "Pudahuel", "Estación Central",
+          "Recoleta", "Independencia", "Conchalí"
+        ],
+      "Valparaíso":
+        [
+          "Valparaíso", "Viña del mar", "Concón", "Casablanca", "Puchuncaví", "Quintero", "Juan Fernández", "Quilpué", "Villa Alemana", "Limache", "Olmué",
+          "San Antonio", "Cartagena", "El Tabo", "El Quisco", "Algarrobo", "Santo Domingo", "Quillota", "La Calera", "Cruz", "Hijuelas", "Nogales", "San Felipe", "Llaillay",
+          "Catemu", "Panquehue", "Putaendo", "Santa María", "Los Andes", "San Esteban", "Calle Larga", "Rinconada", "La Ligua", "Cabildo", "Petorca", "Papudo", "Zapallar"
+        ],
+      "Región del Libertador General Bernardo O'Higgins":
+        [
+          "Rancagua", "Machalí", "Graneros", "San Francisco de Mostazal", "Doñihue", "Coltauco", "Coinco", "Olivar", "Requínoa", "Rengo", "Malloa", "Quinta de Tilcoco",
+          "San Vicente de Tagua Tagua", "Pichidegua", "Peumo", "Las Cabras", "San Fernando", "Santa Cruz", "Chimbarongo", "San Vicente", "Nancagua", "Placilla", "Palmilla",
+          "Peralillo", "Chépica", "Lolol", "Pumanque", "Pichilemu", "Marchigüe", "Litueche", "La Estrella", "Navidad", "Paredones"
+        ]
+    };
 
-    <script>
+    const slcregion = document.getElementById('slcregion');
+    const slccomuna = document.getElementById('slccomuna')
 
-        window.onload = function () {
-            // CARGA DE ZONAS
+    function cargarRegiones() {
+      // Se obtienen las regiones del objeto creado anteriormente y se ordenan por nombre
+      const regiones = Object.keys(regionesYComunas).sort();
 
-            const regionSelect = document.getElementById('regionSelect');
-            const comunaSelect = document.getElementById('comunaSelect');
+      regiones.forEach(region => {
+        const option = document.createElement('option');
+        option.value = region;
+        option.textContent = region;
+        slcregion.appendChild(option)
+      });
+    }
 
-            // Llenar el selector de regiones
-            regiones.forEach(region => {
-                const option = document.createElement('option');
-                option.value = region.id;
-                option.textContent = region.nombre;
-                regionSelect.appendChild(option);
-            });
+    function actualizarComuna() {
+      const region = slcregion.value; // Se obtiene la comuna elegida
 
-            // Escuchar cambios en el selector de regiones
-            regionSelect.addEventListener('change', function () {
-                const selectedRegionId = parseInt(this.value);
+      slccomuna.innerHTML = '<option value="">Seleccione una comuna</option>';
 
-                // Limpiar el selector de comunas
-                comunaSelect.innerHTML = '';
-                // comunaSelect.innerHTML = '<option value="" disabled selected>Seleccione una comuna</option>';
+      // Si se selecciona la opción 'Seleccione una región' deberá poner en comuna el mensaje a través de innerHTML
+      if (region === '') {
+        slccomuna.disabled = true;
+        slccomuna.innerHTML = '<option value="">Primero seleccione una región</option>';
+        return;
+      }
 
-                // Llenar el selector de comunas para la región seleccionada
-                const filteredComunas = comunas.filter(comuna => comuna.id_region === selectedRegionId);
-                filteredComunas.forEach(comuna => {
-                    const option = document.createElement('option');
-                    option.value = comuna.id;
-                    option.textContent = comuna.nombre;
-                    comunaSelect.appendChild(option);
-                });
-            });
+      const comunas = regionesYComunas[region];
 
-            document.getElementById('regionSelect').dispatchEvent(new Event('change'));
+      slccomuna.disabled = false;
 
+      comunas.sort().forEach(comuna => {
+        const option = document.createElement('option');
+        option.value = comuna;
+        option.textContent = comuna;
+        slccomuna.appendChild(option);
+      });
+    }
 
-            // ALERTAS DE TOASTIFY
+    slcregion.addEventListener('change', actualizarComuna);
 
-        };
-        function handleGuardar() {
+    cargarRegiones();
 
-            // Toastify error
-            Toastify({
-                text: "Error no se ha salido mal.",
-                duration: 3000,
-                newWindow: true,
-                close: true,
-                gravity: "top", // `top` or `bottom`
-                position: "right", // `left`, `center` or `right`
-                stopOnFocus: true, // Prevents dismissing of toast on hover
-                style: {
-                    background: "red",
-                },
-                onClick: function () {
-                    console.log('Toast clicked');
-                }
-            }).showToast();
+    //Validamos la contraseñas y el correo, si no se cumplen le devolvemos al usuario un mensaje
+    const formulario = document.querySelector("form");
 
-        }
+    formulario.addEventListener("submit", function (event) {
 
+      const contrasena = document.getElementById("contrasena").value;
+      const confirmarcontrasena = document.getElementById("confirmarcontrasena").value;
+      const correo = document.getElementById("correo").value
 
-    </script>
+      if (correo.length > 100) {
+        alert("El correo debe tener un máximo de 100 caracteres");
+        event.preventDefault();
+        return;
+      }
+
+      if (!correo.endsWith("@duoc.cl") && !correo.endsWith("@profesor.duoc.cl") && !correo.endsWith("@gmail.com")) {
+        alert("El correo debe ser un @gmail.com o un @profesor.duoc.cl o un @duoc.cl")
+        event.preventDefault();
+        return;
+      }
+
+      if (contrasena.length < 4) {
+        alert("La contraseña debe tener al menos 4 caracteres");
+        event.preventDefault();
+        return;
+      }
+
+      if (contrasena.length > 10) {
+        alert("La contraseña no debe tener más de 10 caracteres");
+        event.preventDefault();
+        return;
+      }
+
+      if (contrasena !== confirmarcontrasena) {
+        alert("Las contraseñas no coinciden");
+        event.preventDefault(); //sirve para detener el envío del formulario si las contraseñas no son iguales
+        return;
+      }
+    });
+  </script>
 </body>
 
 </html>
