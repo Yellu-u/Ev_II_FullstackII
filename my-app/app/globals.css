@@ -24,3 +24,542 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Generales */
+
+body {
+  background-color: white;
+}
+
+/* Fonts */
+h1 {
+  font-family: Montserrat;
+  font-weight: bold;
+}
+
+/* Aquí van todos los estilos referidos a páginas del usuario */
+/* Nav */
+
+.navbar-proper {
+  background-color: #203359;
+}
+
+.navbar-proper .nav-link {
+  color: #d6d6d6;
+}
+
+.navbar-proper .nav-link:hover {
+  color: white;
+}
+
+#logo-color-img-nav {
+  width: 100px;
+  margin: 10px;
+}
+
+
+/* Registro */
+
+.registro-titulo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container-form {
+  background-color: #d6d6d6;
+  padding: 50px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+/* Inicio Sesión */
+
+.login-titulo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#logo-proper {
+  width: 250px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Contacto */
+
+.contacto-titulo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Aquí van todos los estilos referidos a páginas del administrador */
+
+/* Admin main */
+
+.row {
+  display: flex;
+  align-items: stretch;
+}
+
+.container-nav {
+  background-color: #203359;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-nav #logo-proper-nav {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+}
+
+.navbar-menu {
+  list-style: none;
+}
+
+.navbar-menu a {
+  color: #d6d6d6;
+}
+
+.navbar-menu a:hover {
+  color: white;
+}
+
+.navbar-admin-icon {
+  padding: 10px;
+}
+
+.navbar-admin-logout {
+  margin-top: auto;
+  padding: 30px;
+}
+
+.img-proper-header {
+  width: 100%;
+  text-align: center;
+}
+
+.img-proper-header #img-proper-header {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.container-info {
+  padding: 20px;
+  width: 70%;
+  margin: 10px auto;
+  text-align: center;
+  border-radius: 15px;
+
+  background: linear-gradient(90deg,
+      #5ac0d6,
+      #aedfec)
+}
+
+.container-info p {
+  font-family: Montserrat;
+  font-size: 20px;
+}
+
+#saludo {
+  color: #1e3054;
+  padding: 20px;
+  margin-left: 15%;
+}
+
+/* Admin productos */
+
+.container-productos {
+  padding: 20px;
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.container-productos h1 {
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.btn-agregar-producto {
+  display: inline-block;
+  background-color: #d6d6d6;
+  color: #203359;
+  border: none;
+  font-family: Montserrat;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 25px;
+  text-decoration: none;
+}
+
+.btn-agregar-producto:hover {
+  background-color: #203359;
+  color: white;
+}
+
+.tabla-productos {
+  width: 100%;
+  box-shadow: 0 4px 15px #d6d6d6;
+}
+
+.tabla-productos thead {
+  background-color: #203359;
+  color: white;
+}
+
+.tabla-productos th {
+  padding: 15px;
+  text-align: center;
+  font-family: Montserrat;
+}
+
+.tabla-productos td {
+  padding: 15px;
+  text-align: center;
+  font-family: Montserrat;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.btn-editar {
+  background-color: #d6d6d6;
+  color: #203359;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-editar:hover {
+  background-color: #203359;
+  color: white;
+}
+
+#titulo {
+  color: #1e3054;
+  padding: 20px;
+  margin: 20px 90px;
+}
+
+/* Admin página clientes */
+
+.container-clientes {
+  padding: 20px;
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.container-clientes h1 {
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.btn-agregar-cliente {
+  display: inline-block;
+  background-color: #d6d6d6;
+  color: #203359;
+  border: none;
+  font-family: Montserrat;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 25px;
+  text-decoration: none;
+}
+
+.btn-agregar-cliente:hover {
+  background-color: #203359;
+  color: white;
+}
+
+.tabla-clientes {
+  width: 100%;
+  box-shadow: 0 4px 15px #d6d6d6;
+}
+
+.tabla-clientes thead {
+  background-color: #203359;
+  color: white;
+}
+
+.tabla-clientes th {
+  padding: 15px;
+  text-align: center;
+  font-family: Montserrat;
+}
+
+.tabla-productos td {
+  padding: 15px;
+  text-align: center;
+  font-family: Montserrat;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.btn-editar {
+  background-color: #d6d6d6;
+  color: #203359;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-editar:hover {
+  background-color: #203359;
+  color: white;
+}
+
+/*Benja*/
+/* Fonts */
+
+body {
+  background-color: white;
+}
+
+/* Nav */
+
+.navbar-proper {
+  background-color: #203359;
+}
+
+.navbar-proper .nav-link {
+  color: #d6d6d6;
+}
+
+.navbar-proper .nav-link:hover {
+  color: white;
+}
+
+#logo-color-img-nav {
+  width: 100px;
+  margin: 10px;
+}
+
+
+/* Registro */
+
+.registro-titulo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container-form {
+  background-color: #d6d6d6;
+  padding: 50px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+/* Inicio Sesión */
+
+.login-titulo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#logo-proper {
+  width: 250px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Contacto */
+
+.contacto-titulo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+/*Benja*/
+/* Incio Sesión y Registrar (Benja)*/
+
+#contenedor_carta {
+  width: 200px;
+  text-align: center;
+
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+
+}
+
+.Productos_lista {
+  background-color: #d1d0d0;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.informacion-producto {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+}
+
+.Productos_lista img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+
+}
+
+footer {
+  display: block;
+}
+
+
+
+/* Configuración de productos*/
+
+.container-fluid h1 {
+  font-family: Montserrat;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 20px;
+
+}
+
+.tituloProducto {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.footer-proper {
+  background-color: #203359;
+  color: #ffffff;
+  padding: 15px;
+  margin-top: 60px;
+}
+
+h5 {
+  color: #203359;
+
+}
+
+.container-form {
+  background-color: #d6d6d6;
+  padding: 50px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.container-informacion {
+  background-color: #d6d6d6;
+  float: right;
+  padding: 50px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.container.titulo {
+  background-color: #1e3054;
+  text-align: center;
+  background-position: center;
+}
+
+.contener-gerente {
+  background-color: #203359;
+
+}
+
+.navbar-proper2 {
+  background-color: #fefeff;
+}
+
+/* Quienes somos */
+
+.container-somos {
+  background-color: #d6d6d6;
+  padding: 10px;
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 15px;
+  font-family: Montserrat;
+}
+
+
+.contacto-gerente {
+  font-family: Montserrat;
+  padding: 10px;
+  width: 60%;
+  margin: 5px auto;
+  text-align: center;
+
+}
+
+.carousel-slide {
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.titulo-principal {
+  text-align: center;
+  font-weight: bold;
+  /* Equivale a mb-5 */
+}
+
+
+
+/*ESTILO DE NOTICIAS.HTML*/
+.tarjeta-noticia {
+  background-color: #f8f9fa;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+
+}
+
+.titulo-noticia {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.texto-noticia {
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo del botón selector */
+.select-noticia {
+  width: 50%;
+  font-weight: bold;
+  border-radius: 0;
+
+}
+
+
+/* Estilo de la imagen */
+.imagen-noticia {
+  width: 100%;
+  max-width: 100%;
+}
+
+.btn-info {
+  background-color: #203359;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-info:hover {
+  background-color: #1a2947;
+  color: #ffffff;
+}
