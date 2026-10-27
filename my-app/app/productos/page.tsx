@@ -1,11 +1,14 @@
-export const instant = false;
+"use client";
+
 import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import {productos} from "../../data/productos.js";
+import { useCarrito } from "../context/CarritoContext";
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer'; 
 
 
-function ItemProducto({ producto }) {
+function ItemProducto({ producto, onAgregar }) {
     const url = "/productos/" + producto.id;
 
     return (
@@ -30,11 +33,15 @@ function ItemProducto({ producto }) {
                         </p>
                         
                         <div className="d-grid gap-2">
-                            <Link href={url} className="btn btn-sm boton-detalle">
+                            <Link href={url} className="btn btn-sm btn-outline-primary">
                                 Ver detalle
                             </Link>
                             
-                            <button className="btn btn-sm boton-carrito" >
+                            {/* 3. Conectamos el botón a la función onAgregar */}
+                            <button 
+                                className="btn btn-sm btn-success"
+                                onClick={() => onAgregar(producto)}
+                            >
                                 Añadir al carrito
                             </button>
                         </div>
@@ -45,13 +52,15 @@ function ItemProducto({ producto }) {
     );
 }
 
-function ListaProductos({ productos }) {
+
+function ListaProductos({ productos, onAgregar }) {
     return (
         <div className="row g-4">
             {productos.map((unProducto) => (
                 <ItemProducto 
                     producto={unProducto} 
-                    key={unProducto.id} 
+                    key={unProducto.id}
+                    onAgregar={onAgregar} 
                 />
             ))}
         </div>
@@ -61,8 +70,10 @@ function ListaProductos({ productos }) {
 
 export default function Productos() {
     const cuantos = productos.length;
+    const { agregarAlCarrito } = useCarrito(); // 2. Obtenemos la función del contexto
     return (
         <div className="d-flex flex-column min-vh-100">
+            <Navbar />
             <div className="container py-5 flex-grow-1">
                 <div className="text-center mb-5">
                     <h1 className="fw-bold">PRODUCTOS</h1>
@@ -70,12 +81,12 @@ export default function Productos() {
                     <hr />
                 </div>
                 
-                <div className="row g-4">
-                    {productos.map((unProducto) => (
-                        <ItemProducto producto={unProducto} key={unProducto.id} />
-                    ))}
-                </div>
+                <ListaProductos 
+                    productos={productos} 
+                    onAgregar={agregarAlCarrito} // 4. Pasamos la función al componente
+                />
             </div>
+            <Footer />
         </div>
     );
 }
