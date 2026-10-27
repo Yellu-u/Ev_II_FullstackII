@@ -2,14 +2,12 @@
 
 import { createContext, useState, useContext } from 'react';
 
-// 1. Creamos la "mochila" global
+
 const CarritoContext = createContext();
 
-// 2. Creamos el componente que provee la mochila a toda la app
 export function CarritoProvider({ children }) {
-    // AQUÍ ESTÁ EL FAMOSO useState (La memoria del carrito)
     const [carrito, setCarrito] = useState([]); 
-    const [isOpen, setIsOpen] = useState(false); // Para abrir el panel lateral
+    const [isOpen, setIsOpen] = useState(false); 
 
     // Función para agregar un producto
     const agregarAlCarrito = (producto) => {
@@ -31,6 +29,12 @@ export function CarritoProvider({ children }) {
         setCarrito((prev) => prev.filter(item => item.id !== id));
     };
 
+    // Función para limpiar todo
+    const vaciarCarrito = () => {
+        setCarrito([]);
+    };
+
+
     // Calculamos el total a pagar
     const total = carrito.reduce((acc, item) => acc + (item.precio_nuevo * item.cantidad), 0);
 
@@ -41,11 +45,13 @@ export function CarritoProvider({ children }) {
             eliminarDelCarrito, 
             total,
             isOpen,
-            setIsOpen
+            setIsOpen,
+            vaciarCarrito
         }}>
             {children}
         </CarritoContext.Provider>
     );
+    
 }
 
 // 3. Función para usar el carrito en cualquier página
