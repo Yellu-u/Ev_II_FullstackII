@@ -2,6 +2,8 @@ export const instant = false;
 import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import {productos} from "../../data/productos.js";
+
 
 function ItemProducto({ producto }) {
     const url = "/productos/" + producto.id;
@@ -47,20 +49,18 @@ function ListaProductos({ productos }) {
     return (
         <div className="row g-4">
             {productos.map((unProducto) => (
-                <ItemProducto producto={unProducto} key={unProducto.id} />
+                <ItemProducto 
+                    producto={unProducto} 
+                    key={unProducto.id} 
+                />
             ))}
         </div>
     );
 }
 
 
-
-export default async function Productos() {
-    const url_base = "http://localhost:4000/products/";
-    const response = await fetch(url_base);
-    const productos = await response.json();
+export default function Productos() {
     const cuantos = productos.length;
-
     return (
         <div className="d-flex flex-column min-vh-100">
             <div className="container py-5 flex-grow-1">
@@ -70,21 +70,12 @@ export default async function Productos() {
                     <hr />
                 </div>
                 
-                <ListaProductos productos={productos} />
-            </div>
-            
-            <footer className="footer-proper mt-auto">
-                <div className="container text-center">
-                    <h2>PROPER CHILE</h2>
-                    <p className="mb-1">&copy; Proper Chile. Fabricación Chilena de Excelencia.</p>
-                    <div className="footer-links mt-2">
-                        <Link href="/" className="text-white text-decoration-none mx-2">Inicio</Link>|
-                        <Link href="/nosotros" className="text-white text-decoration-none mx-2">Nosotros</Link>|
-                        <Link href="/contacto" className="text-white text-decoration-none mx-2">Contacto</Link>
-                    </div>
+                <div className="row g-4">
+                    {productos.map((unProducto) => (
+                        <ItemProducto producto={unProducto} key={unProducto.id} />
+                    ))}
                 </div>
-            </footer>
-
+            </div>
         </div>
     );
 }
