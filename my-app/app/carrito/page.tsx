@@ -1,111 +1,86 @@
 "use client";
 
 import { useCarrito } from "../context/CarritoContext";
-import { productos } from "../../data/productos.js";
 import Link from "next/link";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export default function Carrito() {
-    const { carrito, agregarAlCarrito, eliminarDelCarrito, vaciarCarrito, total } = useCarrito();
+    const { carrito, eliminarDelCarrito, vaciarCarrito, total, sumarCantidad, restarCantidad } = useCarrito();
 
     return (
         <div className="d-flex flex-column min-vh-100 bg-light">
             <Navbar />
             
             <div className="container py-5 flex-grow-1">
-                <h1 className="text-center fw-bold mb-5">Mi Tienda 🛒</h1>
+                <h1 className="text-center fw-bold mb-5">Tu Carrito 🛒</h1>
 
-                <div className="row">
-                    <div className="col-lg-8 mb-4">
-                        <h4 className="mb-3 border-bottom pb-2">Lista de productos</h4>
-                        <div className="row">
-                            {productos.slice(0, 6).map((unProducto) => (
-                                <div className="col-12 col-sm-6 mb-3" key={unProducto.id}>
-                                    <div className="card h-100 shadow-sm">
-                                        <div className="card-body d-flex flex-column text-center">
+                {carrito.length === 0 ? (
+                    <div className="text-center mt-5">
+                        <h4 className="text-muted">El carrito está vacío.</h4>
+                        <Link href="/productos" className="btn btn-primary mt-3">
+                            Ir a comprar
+                        </Link>
+                    </div>
+                ) : (
+                    <div className="row justify-content-center">
+                        <div className="col-md-8">
+                            <ul className="list-group mb-4">
+                                {carrito.map((item) => (
+                                    <li key={item.id} className="list-group-item d-flex justify-content-between align-items-center py-3">
+                                        
+                                        <div className="d-flex align-items-center">
                                             <img 
-                                                src={unProducto.imagen} 
-                                                alt={unProducto.nombre} 
-                                                style={{ height: "80px", objectFit: "contain" }} 
-                                                className="mb-2"
+                                                src={item.imagen} 
+                                                alt={item.nombre} 
+                                                style={{ width: "60px", height: "60px", objectFit: "contain" }} 
+                                                className="me-3 bg-light rounded p-1"
                                             />
-                                            <h6 className="fw-bold mb-1">{unProducto.nombre}</h6>
-                                            <small className="text-muted mb-2">${unProducto.precio_nuevo.toLocaleString('es-CL')}</small>
-                                            
-                                            <button 
-                                                className="btn btn-sm btn-dark mt-auto" 
-                                                onClick={() => agregarAlCarrito(unProducto)}
-                                            >
-                                                Añadir
-                                            </button>
+                                            <div>
+                                                <h6 className="mb-0 fw-bold">{item.nombre}</h6>
+                                                <small className="text-muted">
+                                                    ${item.precio_nuevo.toLocaleString('es-CL')} c/u
+                                                </small>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                                        
+                                        <div className="d-flex align-items-center">
+                                            <div className="input-group input-group-sm me-4" style={{ width: "100px" }}>
+                                                <button className="btn btn-outline-secondary" onClick={() => restarCantidad(item.id)}>
+                                                    -
+                                                </button>
+                                                <span className="form-control text-center fw-bold bg-white">
+                                                    {item.cantidad}
+                                                </span>
+                                                <button className="btn btn-outline-secondary" onClick={() => sumarCantidad(item.id)}>
+                                                    +
+                                                </button>
+                                            </div>
 
-                    <div className="col-lg-4">
-                        <div className="card shadow-sm sticky-top" style={{ top: "20px" }}>
-                            <div className="card-header bg-white fw-bold">
-                                Carrito de Compras
-                            </div>
+                                            <span className="fw-bold me-4" style={{ minWidth: "80px", textAlign: "right" }}>
+                                                ${(item.precio_nuevo * item.cantidad).toLocaleString('es-CL')}
+                                            </span>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <h4 className="text-end">Total: ${total.toLocaleString('es-CL')}</h4>
                             
-                            <div className="card-body p-0">
-                                {carrito.length === 0 ? (
-                                    <p className="text-center text-muted p-4">El carrito está vacío.</p>
-                                ) : (
-                                    <ul className="list-group list-group-flush">
-                                        {carrito.map((item) => (
-                                            <li key={item.id} className="list-group-item d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h6 className="mb-0 fw-bold">{item.nombre}</h6>
-                                                    <small className="text-muted">Cant: {item.cantidad} x ${item.precio_nuevo}</small>
-                                                </div>
-                                                <div className="d-flex align-items-center">
-                                                    <span className="fw-bold me-3">${(item.precio_nuevo * item.cantidad).toLocaleString('es-CL')}</span>
-                                                    <button 
-                                                        className="btn btn-sm btn-danger" 
-                                                        onClick={() => eliminarDelCarrito(item.id)}
-                                                    >
-                                                        X
-                                                    </button>
-                                                </div>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </div>
-
-                            <div className="card-footer bg-white">
-                                <h5 className="d-flex justify-content-between fw-bold mb-3">
-                                    <span>Total:</span>
-                                    <span>${total.toLocaleString('es-CL')}</span>
-                                </h5>
-                                
-                                <div className="d-grid gap-2">
-                                    <button 
-                                        className="btn btn-secondary" 
-                                        onClick={vaciarCarrito}
-                                        disabled={carrito.length === 0}
-                                    >
-                                        Limpiar Carrito
-                                    </button>
-                                    <button 
-                                        className="btn btn-success" 
-                                        disabled={carrito.length === 0}
-                                    >
-                                        Ir a Pagar
-                                    </button>
-                                    <Link href="/productos" className="btn btn-outline-secondary">
-                                        Seguir comprando
-                                    </Link>
-                                </div>
+                            <div className="d-grid gap-2 mt-4">
+                                <button className="btn btn-secondary" onClick={vaciarCarrito}>
+                                    Limpiar Carrito
+                                </button>
+                                <button className="btn btn-success btn-lg">
+                                    Ir a Pagar
+                                </button>
+                                <Link href="/productos" className="btn btn-outline-secondary">
+                                    Seguir comprando
+                                </Link>
                             </div>
                         </div>
                     </div>
-                </div>
+                )}
             </div>
 
             <Footer />

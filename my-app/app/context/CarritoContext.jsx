@@ -21,7 +21,24 @@ export function CarritoProvider({ children }) {
             // Si no existe, lo agregamos con cantidad 1
             return [...prev, { ...producto, cantidad: 1 }];
         });
-        setIsOpen(true); // Abrimos el panel para que el usuario vea que se agregó
+        setIsOpen(true);
+    };
+
+    const sumarCantidad = (id) => {
+        setCarrito((prev) => 
+            prev.map(item => item.id === id ? { ...item, cantidad: item.cantidad + 1 } : item)
+        );
+    };
+
+    const restarCantidad = (id) => {
+        setCarrito((prev) => {
+            return prev.map(item => {
+                if (item.id === id) {
+                    return { ...item, cantidad: item.cantidad - 1 };
+                }
+                return item;
+            }).filter(item => item.cantidad > 0);
+        });
     };
 
     // Función para eliminar un producto
@@ -42,6 +59,8 @@ export function CarritoProvider({ children }) {
         <CarritoContext.Provider value={{ 
             carrito, 
             agregarAlCarrito, 
+            sumarCantidad,
+            restarCantidad,
             eliminarDelCarrito, 
             total,
             isOpen,
