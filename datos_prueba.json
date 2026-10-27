@@ -14,7 +14,7 @@
     },
     {
       "id": 2,
-      "imagen": "/assets/img/main/",
+      "imagen": "/assets/img/main/cloro-500.jpg",
       "nombre": "CLORO 500",
       "categoria": "Limpieza General",
       "descripcion": "Desinfectante concentrado multisuperficies.",
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cristal_clean.jpg",
       "nombre": "CRISTAL CLEAN",
       "categoria": "Limpieza General",
       "descripcion": "Limpiador transparente para cristales y vidrios.",
@@ -38,7 +38,7 @@
     },
     {
       "id": 4,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/car_wash.jpg",
       "nombre": "CAR WASH",
       "categoria": "Automotriz",
       "descripcion": "Shampoo especializado para lavado exterior de vehículos.",
@@ -50,7 +50,7 @@
     },
     {
       "id": 5,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/eco_wash.jpg",
       "nombre": "ECO WASH",
       "categoria": "Automotriz",
       "descripcion": "Lavado ecológico para carrocerías sin uso excesivo de agua.",
@@ -62,7 +62,7 @@
     },
     {
       "id": 6,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/sani_home.jpg",
       "nombre": "SANI HOME",
       "categoria": "Higiene y Desinfección",
       "descripcion": "Desinfectante ambiental para uso en el hogar.",
@@ -86,7 +86,7 @@
     },
     {
       "id": 8,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/lavaloza2.png",
       "nombre": "LAVALOZA SUPER PLUS",
       "categoria": "Lavandería y Loza",
       "descripcion": "Detergente arrancagrasa concentrado para vajilla.",
@@ -98,7 +98,7 @@
     },
     {
       "id": 9,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/full_clean.png",
       "nombre": "FULL EASY CLEAN",
       "categoria": "Lavandería y Loza",
       "descripcion": "Limpiador multipropósito para cocina y lavandería.",
@@ -110,7 +110,7 @@
     },
     {
       "id": 10,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/acrylic.png",
       "nombre": "ACRYLIC WAX 18",
       "categoria": "Pisos",
       "descripcion": "Cera acrílica autobrillante para pisos resistentes.",
@@ -122,7 +122,7 @@
     },
     {
       "id": 11,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/emul_wax.jpg",
       "nombre": "EMUL WAX",
       "categoria": "Pisos",
       "descripcion": "Cera emulsionada protectora de acabado duradero.",
@@ -134,7 +134,7 @@
     },
     {
       "id": 12,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/super-plus.jpg",
       "nombre": "SUPER PLUS",
       "categoria": "Limpieza General",
       "descripcion": "Limpiador multiuso económico y efectivo.",
@@ -146,7 +146,7 @@
     },
     {
       "id": 13,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/fullgrass.png",
       "nombre": "FULLGRASS",
       "categoria": "Limpieza General",
       "descripcion": "Desengrasante potente para manchas difíciles.",
@@ -158,7 +158,7 @@
     },
     {
       "id": 14,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cloro-gel.png",
       "nombre": "CLORO GEL",
       "categoria": "Limpieza General",
       "descripcion": "Fórmula espesa para una desinfección prolongada.",
@@ -170,7 +170,7 @@
     },
     {
       "id": 15,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cera-spray.jpg",
       "nombre": "CERA SPRAY",
       "categoria": "Automotriz",
       "descripcion": "Cera rápida en aerosol para brillo inmediato en vehículos.",
@@ -182,7 +182,7 @@
     },
     {
       "id": 16,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/renobright.png",
       "nombre": "RENO BRIGHT",
       "categoria": "Automotriz",
       "descripcion": "Renovador de plásticos y gomas automotrices.",
@@ -194,7 +194,7 @@
     },
     {
       "id": 17,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/motor-grass.jpg",
       "nombre": "MOTOR GRASS",
       "categoria": "Automotriz",
       "descripcion": "Desengrasante pesado especial para motores.",
@@ -206,7 +206,7 @@
     },
     {
       "id": 18,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/sini_car.png",
       "nombre": "SANI CAR",
       "categoria": "Automotriz",
       "descripcion": "Sanitizante de tapices y habitáculo de autos.",
@@ -218,7 +218,7 @@
     },
     {
       "id": 19,
-      "imagen": "/assets/img/main/aroma.jpg",
+      "imagen": "/assets/img/main/aroma_fresh.png",
       "nombre": "AROM FRESH CAR",
       "categoria": "Automotriz",
       "descripcion": "Aromatizante ambiental para vehículos con fragancia duradera.",
@@ -230,7 +230,7 @@
     },
     {
       "id": 20,
-      "imagen": "",
+      "imagen": "/assets/img/main/sarro.png",
       "nombre": "SARRO LIMP",
       "categoria": "Higiene y Desinfección",
       "descripcion": "Removedor eficaz de sarro y sedimentos calcáreos.",
@@ -242,7 +242,7 @@
     },
     {
       "id": 21,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cloro_foam.png",
       "nombre": "CLORO FOAM",
       "categoria": "Higiene y Desinfección",
       "descripcion": "Cloro en espuma para mayor penetración en rincones.",
@@ -254,7 +254,7 @@
     },
     {
       "id": 22,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/jabon_perlado.png",
       "nombre": "JABÓN PERLADO",
       "categoria": "Higiene y Desinfección",
       "descripcion": "Jabón líquido para manos con textura perlada y humectante.",
@@ -266,7 +266,7 @@
     },
     {
       "id": 23,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/alc_gel.png",
       "nombre": "ALCOHOL GEL",
       "categoria": "Higiene y Desinfección",
       "descripcion": "Gel desinfectante instantáneo para manos al 70%.",
@@ -278,7 +278,7 @@
     },
     {
       "id": 24,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/alc_limpieza.png",
       "nombre": "ALCOHOL DE LIMPIEZA",
       "categoria": "Higiene y Desinfección",
       "descripcion": "Alcohol Isopropílico/Etílico para desinfección rápida.",
@@ -290,7 +290,7 @@
     },
     {
       "id": 25,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/aromatizante.png",
       "nombre": "AROM FRESH",
       "categoria": "Higiene y Desinfección",
       "descripcion": "Aromatizante de ambientes con alta permanencia.",
@@ -302,7 +302,7 @@
     },
     {
       "id": 26,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/hidrosan_2.jpg",
       "nombre": "HIDROSAN",
       "categoria": "Lavandería y Loza",
       "descripcion": "Sanitizante líquido para textiles y prendas delicadas.",
@@ -314,7 +314,7 @@
     },
     {
       "id": 27,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/remantex.jpg",
       "nombre": "REMANTEX",
       "categoria": "Lavandería y Loza",
       "descripcion": "Removedor de manchas rebeldes para ropa de color.",
@@ -326,7 +326,7 @@
     },
     {
       "id": 28,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/deter_blanca.png",
       "nombre": "DETERGENTE ROPA BLANCA",
       "categoria": "Lavandería y Loza",
       "descripcion": "Detergente blanqueador para potenciar el blanco en las telas.",
@@ -338,7 +338,7 @@
     },
     {
       "id": 29,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/deter_loq.png",
       "nombre": "DETERGENTE LÍQUIDO",
       "categoria": "Lavandería y Loza",
       "descripcion": "Detergente concentrado de lavado profundo para lavadoras.",
@@ -350,7 +350,7 @@
     },
     {
       "id": 30,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/powerful_clean.png",
       "nombre": "POWERFUL CLEAN",
       "categoria": "Lavandería y Loza",
       "descripcion": "Detergente industrial de máxima potencia.",
@@ -362,7 +362,7 @@
     },
     {
       "id": 31,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/remofloor.png",
       "nombre": "REMOFLOOR",
       "categoria": "Pisos",
       "descripcion": "Removedor concentrado de ceras viejas y selladores.",
@@ -374,7 +374,7 @@
     },
     {
       "id": 32,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/aromatic_floor.png",
       "nombre": "AROMATIC FLOOR",
       "categoria": "Pisos",
       "descripcion": "Limpiador perfumado para pisos flotantes y cerámicos.",
@@ -386,7 +386,7 @@
     },
     {
       "id": 33,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/bright_floor.png",
       "nombre": "BRIGHT FLOOR",
       "categoria": "Pisos",
       "descripcion": "Mantenedor de brillo diario para todo tipo de pisos.",
@@ -398,7 +398,7 @@
     },
     {
       "id": 34,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/floor_clean.png",
       "nombre": "FLOOR CLEANER",
       "categoria": "Pisos",
       "descripcion": "Detergente neutro especial para azulejos y cerámicas.",
@@ -410,7 +410,7 @@
     },
     {
       "id": 35,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/atrapol2.png",
       "nombre": "ATRAPOL",
       "categoria": "Pisos",
       "descripcion": "Tratamiento atrapapolvo para mopas y secadores de piso.",
@@ -422,7 +422,7 @@
     },
     {
       "id": 37,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cachupin_desin.png",
       "nombre": "CACHUPIN SHAMPOO CANINO",
       "categoria": "Mascotas",
       "descripcion": "Shampoo neutro para perros con suave aroma.",
@@ -434,7 +434,7 @@
     },
     {
       "id": 38,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cachupin_olor.png",
       "nombre": "CACHUPIN ELIMINA OLORES",
       "categoria": "Mascotas",
       "descripcion": "Neutralizador de malos olores orgánicos de mascotas.",
@@ -446,7 +446,7 @@
     },
     {
       "id": 39,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cachupin_pat.png",
       "nombre": "CACHUPIN LIMPIA PATITAS",
       "categoria": "Mascotas",
       "descripcion": "Espuma limpiadora para almohadillas y patitas.",
@@ -458,7 +458,7 @@
     },
     {
       "id": 40,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cachupin_pet.png",
       "nombre": "CACHUPIN DESINFECTANTE PET",
       "categoria": "Mascotas",
       "descripcion": "Desinfectante seguro para zonas donde transitan mascotas.",
@@ -470,7 +470,7 @@
     },
     {
       "id": 41,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cachupin_limp.png",
       "nombre": "CACHUPIN LIMPIADOR DE ORINA",
       "categoria": "Mascotas",
       "descripcion": "Fórmula enzimática para eliminar manchas y olores de orina.",
@@ -482,7 +482,7 @@
     },
     {
       "id": 42,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cachupin_anti.png",
       "nombre": "CACHUPIN SHAMPOO ANTIPULGAS",
       "categoria": "Mascotas",
       "descripcion": "Shampoo protector repelente de pulgas y garrapatas.",
@@ -494,7 +494,7 @@
     },
     {
       "id": 43,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cachupin_camas.png",
       "nombre": "CACHUPIN LIMPIADOR DE CAMAS",
       "categoria": "Mascotas",
       "descripcion": "Spray higienizante para camitas y mantas de mascotas.",
@@ -506,7 +506,7 @@
     },
     {
       "id": 44,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cachupin_aroma.png",
       "nombre": "CACHUPIN AROMA PET FRIENDLY",
       "categoria": "Mascotas",
       "descripcion": "Ambientador hipoalergénico apto para hogares con animales.",
@@ -518,7 +518,7 @@
     },
     {
       "id": 45,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cachupin_limpiador.png",
       "nombre": "CACHUPIN LIMPIADOR MULTISUPERFICIE",
       "categoria": "Mascotas",
       "descripcion": "Limpiador suave para juguetes y accesorios de mascotas.",
@@ -530,25 +530,13 @@
     },
     {
       "id": 46,
-      "imagen": "/assets/img/main/matic.jpg",
+      "imagen": "/assets/img/main/cachupin_toallitas.png",
       "nombre": "CACHUPIN TOALLITAS HIGIÉNICAS",
       "categoria": "Mascotas",
       "descripcion": "Toallitas húmedas limpiadoras para pelaje y hocico.",
       "precio_descuento": 3800,
       "precio_nuevo": 3300,
       "stock": 25,
-      "enStock": true,
-      "link": "/productos/producto1.html"
-    },
-    {
-      "id": 47,
-      "imagen": "/assets/img/main/matic.jpg",
-      "nombre": "PRODUCTO DE PRUEBA",
-      "categoria": "Pruebas",
-      "descripcion": "Producto de testeo para verificar el catálogo.",
-      "precio_descuento": 12000,
-      "precio_nuevo": 10000,
-      "stock": 10,
       "enStock": true,
       "link": "/productos/producto1.html"
     }
