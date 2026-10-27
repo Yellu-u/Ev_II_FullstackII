@@ -1,3 +1,5 @@
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 
 export default function BlogPage() {
@@ -5,23 +7,7 @@ export default function BlogPage() {
                 <div className="d-flex flex-column min-vh-100">
 
                         {/* NAVBAR */}
-                        <nav className="navbar navbar-expand-sm navbar-proper shadow-sm">
-                                <div className="container-fluid px-4">
-                                        <div className="navbar-header">
-                                                <img id="logo-color-img-nav" src="/assets/img/logos/logocolor.png" alt="logo-proper-color" />
-                                        </div>
-                                        <ul className="navbar-nav mx-auto">
-                                                <li className="nav-item"><Link className="nav-link fw-semibold" href="/">Home</Link></li>
-                                                <li className="nav-item"><Link className="nav-link fw-semibold" href="/productos">Productos</Link></li>
-                                                <li className="nav-item"><Link className="nav-link fw-semibold" href="/nosotros">Nosotros</Link></li>
-                                                <li className="nav-item"><Link className="nav-link fw-semibold" href="/contacto">Contacto</Link></li>
-                                                <li className="nav-item"><Link className="nav-link fw-semibold" href="/blog">Blogs</Link></li>
-                                        </ul>
-                                        <ul className="nav navbar-nav navbar-right">
-                                                <li><Link href="/carrito" className="nav-link text-white fw-bold">Carrito</Link></li>
-                                        </ul>
-                                </div>
-                        </nav>
+                        <Navbar />
 
                         {/* CONTENIDO PRINCIPAL */}
                         <main className="flex-grow-1 py-5">
@@ -81,18 +67,7 @@ export default function BlogPage() {
                         </main>
 
                         {/* FOOTER */}
-                        <footer className="footer-proper mt-auto">
-                                <div className="container text-center">
-                                        <h2>PROPER CHILE</h2>
-                                        <p className="mb-1">&copy; Proper Chile. Fabricación Chilena de Excelencia.</p>
-                                        <div className="footer-links mt-2">
-                                                <Link href="/" className="text-white text-decoration-none mx-2">Inicio</Link>|
-                                                <Link href="/nosotros" className="text-white text-decoration-none mx-2">Nosotros</Link>|
-                                                <Link href="/contacto" className="text-white text-decoration-none mx-2">Contacto</Link>
-                                        </div>
-                                </div>
-                        </footer>
-
+                        <Footer />
                 </div>
         );
 }

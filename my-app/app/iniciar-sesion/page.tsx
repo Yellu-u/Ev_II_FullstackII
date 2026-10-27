@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export default function LoginPage() {
         const [correo, setCorreo] = useState('');
@@ -33,23 +35,7 @@ export default function LoginPage() {
                 <div className="login-wrapper">
 
                         {/* NAVBAR */}
-                        <nav className="navbar navbar-expand-sm navbar-proper shadow-sm">
-                                <div className="container-fluid px-4">
-                                        <div className="navbar-header">
-                                                <img id="logo-color-img-nav" src="/assets/img/logos/logocolor.png" alt="logo-proper-color" />
-                                        </div>
-                                        <ul className="navbar-nav mx-auto">
-                                                <li className="nav-item"><Link className="nav-link fw-semibold" href="/">Home</Link></li>
-                                                <li className="nav-item"><Link className="nav-link fw-semibold" href="/productos">Productos</Link></li>
-                                                <li className="nav-item"><Link className="nav-link fw-semibold" href="/nosotros">Nosotros</Link></li>
-                                                <li className="nav-item"><Link className="nav-link fw-semibold" href="/contacto">Contacto</Link></li>
-                                                <li className="nav-item"><Link className="nav-link fw-semibold" href="/blog">Blogs</Link></li>
-                                        </ul>
-                                        <ul className="nav navbar-nav navbar-right">
-                                                <li><Link href="/carrito" className="nav-link text-white fw-bold">Carrito</Link></li>
-                                        </ul>
-                                </div>
-                        </nav>
+                        <Navbar />
 
                         {/* CONTENEDOR PRINCIPAL */}
                         <div className="container d-flex justify-content-center align-items-center min-vh-100 py-5">
