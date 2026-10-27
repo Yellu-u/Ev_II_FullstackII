@@ -421,7 +421,7 @@
       "link": "/productos/producto1.html"
     },
     {
-      "id": 37,
+      "id": 36,
       "imagen": "/assets/img/main/cachupin_desin.png",
       "nombre": "CACHUPIN SHAMPOO CANINO",
       "categoria": "Mascotas",
@@ -433,7 +433,7 @@
       "link": "/productos/producto1.html"
     },
     {
-      "id": 38,
+      "id": 37,
       "imagen": "/assets/img/main/cachupin_olor.png",
       "nombre": "CACHUPIN ELIMINA OLORES",
       "categoria": "Mascotas",
@@ -445,7 +445,7 @@
       "link": "/productos/producto1.html"
     },
     {
-      "id": 39,
+      "id": 38,
       "imagen": "/assets/img/main/cachupin_pat.png",
       "nombre": "CACHUPIN LIMPIA PATITAS",
       "categoria": "Mascotas",
@@ -457,7 +457,7 @@
       "link": "/productos/producto1.html"
     },
     {
-      "id": 40,
+      "id": 39,
       "imagen": "/assets/img/main/cachupin_pet.png",
       "nombre": "CACHUPIN DESINFECTANTE PET",
       "categoria": "Mascotas",
@@ -469,7 +469,7 @@
       "link": "/productos/producto1.html"
     },
     {
-      "id": 41,
+      "id": 40,
       "imagen": "/assets/img/main/cachupin_limp.png",
       "nombre": "CACHUPIN LIMPIADOR DE ORINA",
       "categoria": "Mascotas",
@@ -481,7 +481,7 @@
       "link": "/productos/producto1.html"
     },
     {
-      "id": 42,
+      "id": 41,
       "imagen": "/assets/img/main/cachupin_anti.png",
       "nombre": "CACHUPIN SHAMPOO ANTIPULGAS",
       "categoria": "Mascotas",
@@ -493,7 +493,7 @@
       "link": "/productos/producto1.html"
     },
     {
-      "id": 43,
+      "id": 42,
       "imagen": "/assets/img/main/cachupin_camas.png",
       "nombre": "CACHUPIN LIMPIADOR DE CAMAS",
       "categoria": "Mascotas",
@@ -505,7 +505,7 @@
       "link": "/productos/producto1.html"
     },
     {
-      "id": 44,
+      "id": 43,
       "imagen": "/assets/img/main/cachupin_aroma.png",
       "nombre": "CACHUPIN AROMA PET FRIENDLY",
       "categoria": "Mascotas",
@@ -517,7 +517,7 @@
       "link": "/productos/producto1.html"
     },
     {
-      "id": 45,
+      "id": 44,
       "imagen": "/assets/img/main/cachupin_limpiador.png",
       "nombre": "CACHUPIN LIMPIADOR MULTISUPERFICIE",
       "categoria": "Mascotas",
@@ -529,7 +529,7 @@
       "link": "/productos/producto1.html"
     },
     {
-      "id": 46,
+      "id": 45,
       "imagen": "/assets/img/main/cachupin_toallitas.png",
       "nombre": "CACHUPIN TOALLITAS HIGIÉNICAS",
       "categoria": "Mascotas",
