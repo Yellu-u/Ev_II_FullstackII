@@ -8,7 +8,7 @@ export default function Navbar() {
                                         <img id="logo-color-img-nav" src="/assets/img/logos/logocolor.png" alt="logo-proper-color" />
                                 </div>
                                 <ul className="navbar-nav mx-auto">
-                                        <li className="nav-item"><Link className="nav-link fw-semibold" href="/">Home</Link></li>
+                                        <li className="nav-item"><Link className="nav-link fw-semibold" href="/home">Home</Link></li>
                                         <li className="nav-item"><Link className="nav-link fw-semibold" href="/productos">Productos</Link></li>
                                         <li className="nav-item"><Link className="nav-link fw-semibold" href="/nosotros">Nosotros</Link></li>
                                         <li className="nav-item"><Link className="nav-link fw-semibold" href="/contacto">Contacto</Link></li>
