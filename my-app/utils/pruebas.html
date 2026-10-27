@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+        <title>Pruebas QUnit - ProperChile</title>
+        <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.19.4.css">
+        <script src="https://code.jquery.com/qunit/qunit-2.19.4.js"></script>
+</head>
+
+<body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+
+        <script type="module">
+                import { validarCorreo, validarContrasena, validarRegistro, validarContacto } from './validaciones.js';
+
+                QUnit.module('Pruebas Formularios ProperChile', function () {
+
+                        QUnit.test('Login: Correo válido @gmail', function (assert) {
+                                assert.ok(validarCorreo('usuario@gmail.com'));
+                        });
+                        QUnit.test('Login: Correo inválido @hotmail', function (assert) {
+                                assert.notOk(validarCorreo('usuario@hotmail.com'));
+                        });
+                        QUnit.test('Login: Contraseña válida (5 caracteres)', function (assert) {
+                                assert.ok(validarContrasena('12345'));
+                        });
+                        QUnit.test('Login: Contraseña inválida (3 caracteres)', function (assert) {
+                                assert.notOk(validarContrasena('123'));
+                        });
+
+                        QUnit.test('Registro: Datos válidos', function (assert) {
+                                assert.ok(validarRegistro('Juan', 'juan@gmail.com', '12345', '12345'));
+                        });
+                        QUnit.test('Registro: Contraseñas no coinciden', function (assert) {
+                                assert.notOk(validarRegistro('Juan', 'juan@gmail.com', '12345', '54321'));
+                        });
+
+                        QUnit.test('Contacto: Mensaje válido', function (assert) {
+                                assert.ok(validarContacto('Juan', 'juan@gmail.com', 'Hola, necesito cotizar'));
+                        });
+                        QUnit.test('Contacto: Mensaje muy largo', function (assert) {
+                                const mensajeLargo = 'a'.repeat(501);
+                                assert.notOk(validarContacto('Juan', 'juan@gmail.com', mensajeLargo));
+                        });
+                });
+        </script>
+</body>
+
+</html>

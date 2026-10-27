@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import { validarContacto } from '../../utils/validaciones';
 
 export default function ContactoPage() {
         const [nombre, setNombre] = useState('');
@@ -13,28 +13,12 @@ export default function ContactoPage() {
         const handleSubmit = (event: React.SyntheticEvent) => {
                 event.preventDefault();
 
-                // Validaciones basadas en tu HTML original
-                if (nombre.length > 100) {
-                        alert("El nombre debe tener un máximo de 100 caracteres");
+                if (!validarContacto(nombre, correo, mensaje)) {
+                        alert("Revisa los datos: El nombre debe tener máx. 100 caracteres, el correo debe ser válido (@gmail, @duoc) y el mensaje máx. 500 caracteres.");
                         return;
                 }
 
-                if (correo.length > 100) {
-                        alert("El correo debe tener un máximo de 100 caracteres");
-                        return;
-                }
-
-                if (!correo.endsWith("@duocuc.cl") && !correo.endsWith("@profesor.duocuc.cl") && !correo.endsWith("@gmail.com")) {
-                        alert("El correo debe ser un @gmail.com o un @profesor.duocuc.cl o un @duocuc.cl");
-                        return;
-                }
-
-                if (mensaje.length > 500) {
-                        alert("El mensaje debe tener un máximo de 500 caracteres");
-                        return;
-                }
-
-                alert("¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.");
+                alert("¡Mensaje enviado con éxito!");
         };
 
         return (

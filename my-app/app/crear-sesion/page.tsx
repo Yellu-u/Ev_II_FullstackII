@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
+import { validarRegistro } from '../../utils/validaciones';
 
 export default function RegistroPage() {
         const [nombre, setNombre] = useState('');
@@ -13,40 +14,14 @@ export default function RegistroPage() {
         const handleSubmit = (event: React.SyntheticEvent) => {
                 event.preventDefault();
 
-                // Validaciones basadas en tu HTML original
-                if (nombre.length > 150) {
-                        alert("El nombre no debe tener más de 150 caracteres");
-                        return;
-                }
-
-                if (correo.length > 100) {
-                        alert("El correo no debe tener más de 100 caracteres");
-                        return;
-                }
-
-                if (!correo.endsWith("@duocuc.cl") && !correo.endsWith("@profesor.duocuc.cl") && !correo.endsWith("@gmail.com")) {
-                        alert("El correo debe ser un @gmail.com o un @profesor.duocuc.cl o un @duocuc.cl");
-                        return;
-                }
-
-                if (contrasena.length < 4) {
-                        alert("La contraseña debe tener al menos 4 caracteres");
-                        return;
-                }
-
-                if (contrasena.length > 10) {
-                        alert("La contraseña no debe tener más de 10 caracteres");
-                        return;
-                }
-
-                if (contrasena !== confirmarContrasena) {
-                        alert("Las contraseñas no coinciden");
+                if (!validarRegistro(nombre, correo, contrasena, confirmarContrasena)) {
+                        alert("Revisa los datos. Asegúrate de que el correo sea válido, la contraseña tenga entre 4 y 10 caracteres, y que ambas contraseñas coincidan.");
                         return;
                 }
 
                 alert("¡Usuario registrado con éxito!");
         };
-
+        
         return (
                 <div className="login-wrapper">
 

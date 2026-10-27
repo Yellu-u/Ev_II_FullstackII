@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import { validarCorreo, validarContrasena } from '../../utils/validaciones';
 
 export default function LoginPage() {
         const [correo, setCorreo] = useState('');
@@ -12,22 +12,16 @@ export default function LoginPage() {
         const handleSubmit = (event: React.SyntheticEvent) => {
                 event.preventDefault();
 
-                if (correo.length > 100) {
-                        alert("El correo debe tener un máximo de 100 caracteres");
+                if (!validarCorreo(correo)) {
+                        alert("El correo debe ser un @gmail.com o un @duoc.cl y tener máximo 100 caracteres");
                         return;
                 }
-                if (!correo.endsWith("@duocuc.cl") && !correo.endsWith("@profesor.duocuc.cl") && !correo.endsWith("@gmail.com")) {
-                        alert("El correo debe ser un @gmail.com o un @profesor.duocuc.cl o un @duocuc.cl");
+
+                if (!validarContrasena(contrasena)) {
+                        alert("La contraseña debe tener entre 4 y 10 caracteres");
                         return;
                 }
-                if (contrasena.length < 4) {
-                        alert("La contraseña debe tener al menos 4 caracteres");
-                        return;
-                }
-                if (contrasena.length > 10) {
-                        alert("La contraseña no debe tener más de 10 caracteres");
-                        return;
-                }
+
                 alert("¡Inicio de sesión exitoso!");
         };
 
