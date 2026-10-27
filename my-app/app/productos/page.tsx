@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { productos } from "../../data/productos.js";
@@ -20,7 +21,7 @@ function ItemProducto({ producto, onAgregar }) {
                     <div className="mt-auto">
                         <p className="fs-4 fw-bold text-black mb-3">${producto.precio_nuevo.toLocaleString('es-CL')}</p>
                         <div className="d-grid gap-2">
-                            <a href={url} className="btn btn-sm boton-detalle">Ver detalle</a>
+                            <Link href={url} className="btn btn-sm boton-detalle">Ver detalle</Link>
                             <button className="btn btn-sm boton-carrito" onClick={() => onAgregar(producto)}>
                                 Añadir al carrito
                             </button>
@@ -33,7 +34,7 @@ function ItemProducto({ producto, onAgregar }) {
 }
 
 export default function Productos() {
-    // Traemos la función para agregar desde el contexto global
+    // traemos la funcion agregarAlCarrito para usarla acá
     const { agregarAlCarrito } = useCarrito();
 
     // Lógica del filtro de categorías

@@ -8,11 +8,10 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useCarrito } from "../../context/CarritoContext";
 
-// 2. Creamos un componente interno que sí usa useParams
 function DetalleProductoContenido() {
-    const params = useParams();
-    const id = params.slug; 
-    const producto = productos.find(p => p.id === Number(id));
+    const params = useParams(); 
+    const id = Number(params.slug); 
+    const producto = productos.find(p => p.id === id);
     const { agregarAlCarrito } = useCarrito();
 
     if (!producto) {

@@ -323,3 +323,18 @@ h5 {
   color: white;
   transform: background-color 0.3s ease;
 }
+
+.img-carrito{
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.grupo-cantidad {
+    width: 120px;
+}
+
+.subtotal-item {
+    min-width: 80px;
+    text-align: right;
+}
